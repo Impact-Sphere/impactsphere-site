@@ -23,7 +23,7 @@ jobs:
       - name: Build & push
         uses: docker/build-push-action@v6
         with:
-          context: ./api
+          context: .
           push: true
           tags: |
             registry.henriquesf.me/impact-sphere:${{ github.sha }}
