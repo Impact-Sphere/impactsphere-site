@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
+  { name: "Services", href: "/#services" },
   { name: "Our team", href: "/team" },
-  { name: "About us", href: "#about" },
+  { name: "About us", href: "/#about" },
 ];
 
 const teamMembers = [
@@ -97,17 +97,20 @@ export default function TeamPage() {
 
           <div className="hidden md:flex items-center gap-12">
             {navLinks.map((link, index) => (
-              <motion.a
+              <motion.div
                 key={link.name}
-                href={link.href}
-                className="text-lg text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index + 0.3 }}
                 whileHover={{ y: -2 }}
               >
-                {link.name}
-              </motion.a>
+                <Link
+                  href={link.href}
+                  className="text-lg text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium"
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
             ))}
           </div>
 

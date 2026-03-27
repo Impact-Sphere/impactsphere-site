@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const projects = [
   { id: 1, title: "Project 1" },
@@ -32,7 +33,7 @@ const testimonials = [
 
 const navLinks = [
   { name: "Services", href: "#services" },
-  { name: "Our team", href: "#team" },
+  { name: "Our team", href: "/team" },
   { name: "About us", href: "#about" },
 ];
 
@@ -54,19 +55,36 @@ export default function Home() {
           </div>
 
           <div className="hidden md:flex items-center gap-12">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                className="text-lg text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index + 0.3 }}
-                whileHover={{ y: -2 }}
-              >
-                {link.name}
-              </motion.a>
-            ))}
+            {navLinks.map((link, index) =>
+              link.href.startsWith("#") ? (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  className="text-lg text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index + 0.3 }}
+                  whileHover={{ y: -2 }}
+                >
+                  {link.name}
+                </motion.a>
+              ) : (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index + 0.3 }}
+                  whileHover={{ y: -2 }}
+                >
+                  <Link
+                    href={link.href}
+                    className="text-lg text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ),
+            )}
           </div>
 
           <motion.button
