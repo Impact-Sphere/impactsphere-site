@@ -2,13 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-
-const navLinks = [
-  { name: "Services", href: "/#services" },
-  { name: "Our team", href: "/team" },
-  { name: "About us", href: "/#about" },
-];
+import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 const teamMembers = [
   {
@@ -90,83 +85,64 @@ const teamMembers = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
 export default function TeamPage() {
   return (
     <main className="min-h-screen bg-[#ECD5E8] overflow-x-hidden">
-      {/* Navigation */}
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl"
-      >
-        <div className="nav-glass rounded-[70px] px-8 py-5 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-[#3E2A8A]">
-              IMPACT SPHERE
-            </span>
-          </Link>
-
-          <div className="hidden md:flex items-center gap-12">
-            {navLinks.map((link, index) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index + 0.3 }}
-                whileHover={{ y: -2 }}
-              >
-                <Link
-                  href={link.href}
-                  className="text-lg text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium"
-                >
-                  {link.name}
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.button
-            className="px-6 py-2.5 rounded-full border-2 border-[#4652A7] text-[#4652A7] text-base font-medium hover:bg-[#4652A7] hover:text-white transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Log in
-          </motion.button>
-        </div>
-      </motion.nav>
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex flex-col items-center justify-center pt-40 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+      <section className="min-h-[40vh] sm:min-h-[50vh] flex flex-col items-center justify-center pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <h1 className="font-[family-name:var(--font-poppins)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-[rgba(70,82,167,0.8)] mb-4">
+            <h1 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[rgba(70,82,167,0.8)] mb-3 sm:mb-4">
               OUR TEAM
             </h1>
-            <div className="w-72 h-2 bg-[rgba(160,87,153,0.8)] rounded-full mx-auto" />
+            <div className="w-48 sm:w-56 lg:w-72 h-1.5 sm:h-2 bg-[rgba(160,87,153,0.8)] rounded-full mx-auto" />
           </motion.div>
         </div>
       </section>
 
       {/* Team Intro Section */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+        <div className="section-content">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="rounded-[70px] bg-[rgba(97,162,223,0.5)] p-12 sm:p-16 flex flex-col md:flex-row items-center justify-between gap-8"
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="glass-card p-6 sm:p-8 lg:p-12 xl:p-16 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8"
           >
-            <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl md:text-5xl font-semibold text-[#3E2A8A]">
+            <h2 className="font-[family-name:var(--font-poppins)] text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#3E2A8A] text-center md:text-left">
               Get to know our team
             </h2>
-            <p className="font-[family-name:var(--font-cormorant)] text-2xl sm:text-3xl text-[#A05799] italic">
+            <p className="font-[family-name:var(--font-cormorant)] text-lg sm:text-xl lg:text-2xl text-[#A05799] italic text-center md:text-right">
               We turn purpose into impact
             </p>
           </motion.div>
@@ -174,23 +150,26 @@ export default function TeamPage() {
       </section>
 
       {/* Team Grid Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
+      <section className="section-container">
+        <div className="section-content">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
+          >
+            {teamMembers.map((member) => (
               <motion.div
                 key={member.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                variants={itemVariants}
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="group cursor-pointer"
               >
                 <div className="relative">
                   {/* Background with Image */}
                   <div
-                    className={`w-full aspect-[3/4] rounded-3xl ${member.bgColor} relative overflow-hidden`}
+                    className={`w-full aspect-[3/4] rounded-2xl sm:rounded-3xl ${member.bgColor} relative overflow-hidden`}
                   >
                     {/* Team Member Image */}
                     <Image
@@ -205,38 +184,22 @@ export default function TeamPage() {
                   </div>
 
                   {/* Name and Role Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold text-white mb-1 drop-shadow-lg">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 lg:p-6">
+                    <h3 className="font-[family-name:var(--font-poppins)] text-base sm:text-lg lg:text-xl font-bold text-white mb-0.5 sm:mb-1 drop-shadow-lg">
                       {member.name}
                     </h3>
-                    <p className="font-[family-name:var(--font-poppins)] text-sm text-white/90 drop-shadow-md">
+                    <p className="font-[family-name:var(--font-poppins)] text-xs sm:text-sm text-white/90 drop-shadow-md">
                       {member.role}
                     </p>
                   </div>
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <Link
-              href="/"
-              className="font-[family-name:var(--font-poppins)] text-xl font-bold text-[#3E2A8A]"
-            >
-              IMPACT SPHERE
-            </Link>
-
-            <div className="text-sm text-[#55125B]">
-              © 2025 Impact Sphere. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
