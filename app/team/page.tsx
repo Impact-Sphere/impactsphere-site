@@ -7,7 +7,7 @@ import Link from "next/link";
 const navLinks = [
   { name: "Services", href: "/#services" },
   { name: "Our team", href: "/team" },
-  { name: "About us", href: "/#about" },
+  { name: "About us", href: "/about" },
 ];
 
 const teamMembers = [
@@ -145,7 +145,7 @@ export default function TeamPage() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <h1 className="font-[family-name:var(--font-poppins)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-[rgba(70,82,167,0.8)] mb-4">
+            <h1 className="font-[family-name:var(--font-poppins)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[rgba(70,82,167,0.8)] mb-4">
               OUR TEAM
             </h1>
             <div className="w-72 h-2 bg-[rgba(160,87,153,0.8)] rounded-full mx-auto" />

@@ -34,7 +34,7 @@ const testimonials = [
 const navLinks = [
   { name: "Services", href: "#services" },
   { name: "Our team", href: "/team" },
-  { name: "About us", href: "#about" },
+  { name: "About us", href: "/about" },
 ];
 
 export default function Home() {
@@ -112,7 +112,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="font-[family-name:var(--font-poppins)] text-6xl sm:text-7xl md:text-8xl font-bold text-[#3E2A8A] mb-6"
+            className="font-[family-name:var(--font-poppins)] text-5xl sm:text-6xl md:text-7xl font-bold text-[#3E2A8A] mb-6"
           >
             IMPACT SPHERE
           </motion.h1>
@@ -158,7 +158,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl font-extrabold text-[#55125B] mb-4 opacity-80">
+              <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl font-extrabold text-[#55125B] mb-4 opacity-80">
                 OUR PROJECTS
               </h2>
             </motion.div>
@@ -200,7 +200,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl font-extrabold text-[#55125B] mb-4">
+            <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl font-extrabold text-[#55125B] mb-4">
               FEEDBACK
             </h2>
           </motion.div>
@@ -240,7 +240,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl font-extrabold text-[#4652A7] mb-4">
+              <h2 className="font-[family-name:var(--font-poppins)] text-3xl sm:text-4xl font-extrabold text-[#4652A7] mb-4">
                 CONTACTS
               </h2>
             </motion.div>
