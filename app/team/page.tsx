@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -14,67 +15,78 @@ const teamMembers = [
     id: 1,
     name: "Bárbara Sequeira",
     role: "CEO",
-    image: "bg-[#8B2F8B]",
+    image: "/images/team/barbara-sequeira.png",
+    bgColor: "bg-[#8B2F8B]",
   },
   {
     id: 2,
     name: "Xavier Martins",
     role: "CTO",
-    image: "bg-[#9B4F9B]",
+    image: "/images/team/xavier-martins.png",
+    bgColor: "bg-[#9B4F9B]",
   },
   {
     id: 3,
     name: "Pedro Andrade",
     role: "CFO",
-    image: "bg-[#7B6CAC]",
+    image: "/images/team/pedro-andrade.png",
+    bgColor: "bg-[#7B6CAC]",
   },
   {
     id: 4,
     name: "Rita Monteiro",
     role: "Chief Strategy and Impact Officer",
-    image: "bg-[#5B5C98]",
+    image: "/images/team/rita-monteiro.png",
+    bgColor: "bg-[#5B5C98]",
   },
   {
     id: 5,
     name: "José Sousa",
     role: "Implementation Manager",
-    image: "bg-[#5B6BA8]",
+    image: "/images/team/jose-sousa.png",
+    bgColor: "bg-[#5B6BA8]",
   },
   {
     id: 6,
     name: "Margarida Oliveira",
     role: "Project Operations Manager",
-    image: "bg-[#7B5C9C]",
+    image: "/images/team/margarida-oliveira.png",
+    bgColor: "bg-[#7B5C9C]",
   },
   {
     id: 7,
-    name: "Matilde Tavares",
+    name: "Matilde Torres",
     role: "Communication and Social Media Manager",
-    image: "bg-[#9B3F9B]",
+    image: "/images/team/matilde-torres.png",
+    bgColor: "bg-[#9B3F9B]",
   },
   {
     id: 8,
     name: "Pedro Gorobey",
     role: "Design Manager",
-    image: "bg-[#4A6BB8]",
+    image: "/images/team/pedro-gorobey.png",
+    bgColor: "bg-[#4A6BB8]",
   },
   {
     id: 9,
     name: "Francisco Mourão",
     role: "Audiovisual Manager",
-    image: "bg-[#6B4C8C]",
+    image: "/images/team/francisco-mourao.png",
+    bgColor: "bg-[#6B4C8C]",
   },
   {
     id: 10,
     name: "Henrique Fernandes",
     role: "Test Manager",
-    image: "bg-[#8B4F8B]",
+    image: "/images/team/henrique-fernandes.png",
+    bgColor: "bg-[#8B4F8B]",
   },
   {
     id: 11,
     name: "Bruna Jardim",
     role: "UI/UX Manager",
-    image: "bg-[#4A5BA8]",
+    image: "/images/team/bruna-jardim.png",
+    bgColor: "bg-[#4A5BA8]",
   },
 ];
 
@@ -176,11 +188,20 @@ export default function TeamPage() {
                 className="group cursor-pointer"
               >
                 <div className="relative">
-                  {/* Image Placeholder */}
+                  {/* Background with Image */}
                   <div
-                    className={`w-full aspect-[3/4] rounded-3xl ${member.image} relative overflow-hidden`}
+                    className={`w-full aspect-[3/4] rounded-3xl ${member.bgColor} relative overflow-hidden`}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                    {/* Team Member Image */}
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                   </div>
 
                   {/* Name and Role Overlay */}
