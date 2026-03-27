@@ -44,7 +44,7 @@ const logoVariants = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#ECD5E8] overflow-x-hidden">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
 
       <section className="min-h-screen flex flex-col items-center justify-center pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
@@ -76,7 +76,7 @@ export default function Home() {
 
           <motion.p
             variants={heroItemVariants}
-            className="font-[family-name:var(--font-poppins)] text-lg sm:text-xl lg:text-2xl text-[#55125B] mb-10 sm:mb-14 lg:mb-16 max-w-xl mx-auto"
+            className="font-sans text-lg sm:text-xl lg:text-2xl text-primary-purple mb-10 sm:mb-14 lg:mb-16 max-w-xl mx-auto"
           >
             Turning purpose into measurable impact.
           </motion.p>
@@ -135,7 +135,7 @@ export default function Home() {
                 whileHover={{ y: -8 }}
                 className="text-center"
               >
-                <h3 className="heading-card text-[#55125B] mb-3 sm:mb-4">
+                <h3 className="heading-card text-primary-purple mb-3 sm:mb-4">
                   {testimonial.title}
                 </h3>
                 <p className="text-body text-sm sm:text-base">
@@ -157,7 +157,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="text-center mb-8 sm:mb-10 lg:mb-12"
             >
-              <h2 className="font-[family-name:var(--font-poppins)] text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3 sm:mb-4">
+              <h2 className="font-sans text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3 sm:mb-4">
                 CONTACTS
               </h2>
             </motion.div>
@@ -171,7 +171,7 @@ export default function Home() {
                 delay: 0.2,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="font-[family-name:var(--font-poppins)] text-white text-center max-w-4xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed"
+              className="font-sans text-white text-center max-w-4xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed"
             >
               Ready to make an impact? Whether you are a funding company looking
               for vetted projects or an organization seeking capital, we are

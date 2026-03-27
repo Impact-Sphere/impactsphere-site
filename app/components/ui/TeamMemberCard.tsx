@@ -28,10 +28,10 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 lg:p-6">
-          <h3 className="font-[family-name:var(--font-poppins)] text-base sm:text-lg lg:text-xl font-bold text-white mb-0.5 sm:mb-1 drop-shadow-lg">
+          <h3 className="font-sans text-base sm:text-lg lg:text-xl font-bold text-white mb-0.5 sm:mb-1 drop-shadow-lg">
             {member.name}
           </h3>
-          <p className="font-[family-name:var(--font-poppins)] text-xs sm:text-sm text-white/90 drop-shadow-md">
+          <p className="font-sans text-xs sm:text-sm text-white/90 drop-shadow-md">
             {member.role}
           </p>
         </div>

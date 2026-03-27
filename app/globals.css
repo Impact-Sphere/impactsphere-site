@@ -1,33 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary Colors */
   --background: #ecd5e8;
   --foreground: #55125b;
   --primary-purple: #55125b;
   --secondary-purple: #8e3189;
   --accent-purple: #a05799;
   --deep-purple: #3e2a8a;
-
-  /* Secondary Colors */
   --accent-blue: #4652a7;
   --light-blue: #61a2df;
   --text-blue: #708ade;
-
-  /* Background Variants */
   --surface: rgba(255, 255, 255, 0.5);
   --card-pink: rgba(244, 219, 240, 0.94);
   --card-purple: rgba(142, 49, 137, 0.3);
   --glass-blue: rgba(97, 162, 223, 0.8);
   --glass-purple: rgba(160, 87, 153, 0.8);
-
-  /* Text Colors */
   --text-primary: #55125b;
   --text-secondary: #a05799;
   --text-muted: #708ade;
   --text-inverse: #f4dbf0;
-
-  /* Animation */
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 0.3s;
   --duration-normal: 0.6s;
@@ -35,28 +26,29 @@
 }
 
 @theme inline {
-  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary-purple);
-  --color-secondary: var(--secondary-purple);
-  --color-accent: var(--accent-purple);
+  --color-primary-purple: var(--primary-purple);
+  --color-secondary-purple: var(--secondary-purple);
+  --color-accent-purple: var(--accent-purple);
   --color-deep-purple: var(--deep-purple);
   --color-accent-blue: var(--accent-blue);
   --color-light-blue: var(--light-blue);
   --color-text-blue: var(--text-blue);
+  --color-surface: var(--surface);
   --color-card-pink: var(--card-pink);
   --color-card-purple: var(--card-purple);
   --color-glass-blue: var(--glass-blue);
   --color-glass-purple: var(--glass-purple);
-
-  /* Fonts */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
   --font-display: var(--font-playfair);
   --font-serif: var(--font-cormorant);
   --font-sans: var(--font-poppins);
 }
 
-/* Base Styles */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -65,7 +57,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Glass Effect Components */
 .nav-glass {
   background: var(--glass-blue);
   backdrop-filter: blur(10px);
@@ -79,7 +70,6 @@ body {
   border-radius: 70px;
 }
 
-/* Section Styles */
 .section-container {
   @apply py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8;
 }
@@ -88,49 +78,46 @@ body {
   @apply max-w-7xl mx-auto;
 }
 
-/* Button Styles */
 .btn-primary {
-  @apply px-8 sm:px-10 py-4 sm:py-5 rounded-[70px] bg-[#4652A7] text-[#F4DBF0] font-bold text-base sm:text-lg;
-  box-shadow: 0px 4px 4px 0px rgba(142, 49, 137, 0.6);
+  @apply px-8 sm:px-10 py-4 sm:py-5 rounded-[70px] bg-accent-blue text-text-inverse font-bold text-base sm:text-lg;
+  box-shadow: 0px 4px 4px 0px var(--card-purple);
   transition: all var(--duration-fast) var(--ease-smooth);
 }
 
 .btn-primary:hover {
-  box-shadow: 0px 8px 20px 0px rgba(142, 49, 137, 0.8);
+  box-shadow: 0px 8px 20px 0px var(--card-purple);
   transform: scale(1.05);
 }
 
 .btn-secondary {
-  @apply px-6 py-2.5 rounded-full border-2 border-[#4652A7] text-[#4652A7] text-sm sm:text-base font-medium;
+  @apply px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-sm sm:text-base font-medium;
   transition: all var(--duration-fast) var(--ease-smooth);
 }
 
 .btn-secondary:hover {
-  @apply bg-[#4652A7] text-white;
+  @apply bg-accent-blue text-white;
 }
 
-/* Typography Utilities */
 .heading-hero {
-  @apply font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl md:text-6xl font-bold text-[#3E2A8A];
+  @apply font-sans text-4xl sm:text-5xl md:text-6xl font-bold text-deep-purple;
 }
 
 .heading-section {
-  @apply font-[family-name:var(--font-poppins)] text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#55125B];
+  @apply font-sans text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary-purple;
 }
 
 .heading-card {
-  @apply font-[family-name:var(--font-poppins)] text-lg sm:text-xl lg:text-2xl font-bold;
+  @apply font-sans text-lg sm:text-xl lg:text-2xl font-bold;
 }
 
 .text-body {
-  @apply font-[family-name:var(--font-poppins)] text-base sm:text-lg text-[#708ADE] leading-relaxed;
+  @apply font-sans text-base sm:text-lg text-text-muted leading-relaxed;
 }
 
 .text-caption {
-  @apply font-[family-name:var(--font-poppins)] text-sm sm:text-base text-[#A05799];
+  @apply font-sans text-sm sm:text-base text-text-secondary;
 }
 
-/* Card Styles */
 .card-base {
   @apply rounded-3xl overflow-hidden;
   transition: transform var(--duration-fast) var(--ease-smooth);
@@ -149,7 +136,6 @@ body {
   );
 }
 
-/* Animation Utilities */
 .animate-fade-up {
   animation: fadeUp var(--duration-normal) var(--ease-smooth) forwards;
 }
@@ -178,17 +164,14 @@ body {
   }
 }
 
-/* Focus States for Accessibility */
 .focus-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-[#4652A7] focus:ring-offset-2 focus:ring-offset-[#ECD5E8];
+  @apply focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2 focus:ring-offset-background;
 }
 
-/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -204,7 +187,6 @@ html {
   }
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }

@@ -24,7 +24,7 @@ export default function Navigation() {
     >
       <div className="nav-glass rounded-[70px] px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-[family-name:var(--font-poppins)] text-lg sm:text-xl lg:text-2xl font-bold text-[#3E2A8A]">
+          <span className="font-sans text-lg sm:text-xl lg:text-2xl font-bold text-deep-purple">
             IMPACT SPHERE
           </span>
         </Link>
@@ -40,7 +40,7 @@ export default function Navigation() {
             >
               <Link
                 href={link.href}
-                className="text-sm lg:text-base text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium"
+                className="text-sm lg:text-base text-accent-purple hover:text-primary-purple transition-colors duration-300 font-medium"
               >
                 {link.name}
               </Link>
@@ -51,7 +51,7 @@ export default function Navigation() {
         <div className="hidden md:block">
           <motion.button
             type="button"
-            className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 border-[#4652A7] text-[#4652A7] text-sm font-medium hover:bg-[#4652A7] hover:text-white transition-all duration-300"
+            className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 border-accent-blue text-accent-blue text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -62,7 +62,7 @@ export default function Navigation() {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-[#3E2A8A]"
+          className="md:hidden p-2 text-deep-purple"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,14 +84,14 @@ export default function Navigation() {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-base text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium py-2"
+              className="text-base text-accent-purple hover:text-primary-purple transition-colors duration-300 font-medium py-2"
             >
               {link.name}
             </Link>
           ))}
           <button
             type="button"
-            className="px-6 py-2.5 rounded-full border-2 border-[#4652A7] text-[#4652A7] text-base font-medium hover:bg-[#4652A7] hover:text-white transition-all duration-300 mt-2"
+            className="px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
           >
             Log in
           </button>

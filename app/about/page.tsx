@@ -9,7 +9,7 @@ import { values } from "@/app/lib/constants";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#ECD5E8] overflow-x-hidden">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
 
       <section className="min-h-[40vh] sm:min-h-[50vh] flex flex-col items-center justify-center pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="relative"
             >
-              <h1 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#A05799] mb-3 sm:mb-4">
+              <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-accent-purple mb-3 sm:mb-4">
                 ABOUT US
               </h1>
             </motion.div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
       <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
         <div className="section-content">
           <GlassCard>
-            <p className="font-[family-name:var(--font-poppins)] text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-[rgba(70,82,167,0.8)] leading-relaxed">
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-text-blue leading-relaxed">
               At ImpactSphere, we empower Human Rights NGOs to move beyond
               limitations and into meaningful action. By providing strategic
               guidance, professional communication, and access to the right
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 whileHover={{ y: -8 }}
                 className="text-center"
               >
-                <h3 className="heading-card text-[#55125B] mb-3 sm:mb-4">
+                <h3 className="heading-card text-primary-purple mb-3 sm:mb-4">
                   {value.title}
                 </h3>
                 <p className="text-body text-sm sm:text-base">
