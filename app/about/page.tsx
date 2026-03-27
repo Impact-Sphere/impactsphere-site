@@ -1,71 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-
-const navLinks = [
-  { name: "Services", href: "/#services" },
-  { name: "Our team", href: "/team" },
-  { name: "About us", href: "/about" },
-];
+import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#ECD5E8] overflow-x-hidden">
-      {/* Navigation */}
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl"
-      >
-        <div className="nav-glass rounded-[70px] px-8 py-5 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-[#3E2A8A]">
-              IMPACT SPHERE
-            </span>
-          </Link>
-
-          <div className="hidden md:flex items-center gap-12">
-            {navLinks.map((link, index) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index + 0.3 }}
-                whileHover={{ y: -2 }}
-              >
-                <Link
-                  href={link.href}
-                  className="text-lg text-[#A05799] hover:text-[#55125B] transition-colors duration-300 font-medium"
-                >
-                  {link.name}
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.button
-            className="px-6 py-2.5 rounded-full border-2 border-[#4652A7] text-[#4652A7] text-base font-medium hover:bg-[#4652A7] hover:text-white transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Log in
-          </motion.button>
-        </div>
-      </motion.nav>
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex flex-col items-center justify-center pt-40 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="min-h-[40vh] sm:min-h-[50vh] flex flex-col items-center justify-center pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="relative"
             >
-              <h1 className="font-[family-name:var(--font-poppins)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[#A05799] mb-4">
+              <h1 className="font-[family-name:var(--font-poppins)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#A05799] mb-3 sm:mb-4">
                 ABOUT US
               </h1>
             </motion.div>
@@ -79,23 +33,23 @@ export default function AboutPage() {
                 delay: 0.2,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="w-48 h-48 md:w-56 md:h-56 bg-[#D4A5C9] rounded-3xl flex-shrink-0"
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 bg-[#D4A5C9] rounded-2xl sm:rounded-3xl flex-shrink-0"
             />
           </div>
         </div>
       </section>
 
       {/* Mission Statement Section */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+        <div className="section-content">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="rounded-[70px] bg-[rgba(97,162,223,0.8)] p-12 sm:p-16 md:p-20"
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="glass-card p-6 sm:p-10 lg:p-12 xl:p-16"
           >
-            <p className="font-[family-name:var(--font-poppins)] text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[rgba(70,82,167,0.8)] leading-relaxed">
+            <p className="font-[family-name:var(--font-poppins)] text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-[rgba(70,82,167,0.8)] leading-relaxed">
               At ImpactSphere, we empower Human Rights NGOs to move beyond
               limitations and into meaningful action. By providing strategic
               guidance, professional communication, and access to the right
@@ -107,23 +61,63 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 mt-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <Link
-              href="/"
-              className="font-[family-name:var(--font-poppins)] text-xl font-bold text-[#3E2A8A]"
-            >
-              IMPACT SPHERE
-            </Link>
+      {/* Values Section */}
+      <section className="section-container">
+        <div className="section-content">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="text-center mb-10 sm:mb-12 lg:mb-16"
+          >
+            <h2 className="heading-section">OUR VALUES</h2>
+          </motion.div>
 
-            <div className="text-sm text-[#55125B]">
-              © 2025 Impact Sphere. All rights reserved.
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                title: "Impact First",
+                description:
+                  "We measure success by the positive change we create in communities and lives.",
+              },
+              {
+                title: "Transparency",
+                description:
+                  "Open communication and clear metrics build trust with our partners and stakeholders.",
+              },
+              {
+                title: "Collaboration",
+                description:
+                  "We believe in the power of partnerships to amplify impact and drive innovation.",
+              },
+            ].map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                whileHover={{ y: -8 }}
+                className="text-center"
+              >
+                <h3 className="heading-card text-[#55125B] mb-3 sm:mb-4">
+                  {value.title}
+                </h3>
+                <p className="text-body text-sm sm:text-base">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </footer>
+      </section>
+
+      <Footer />
     </main>
   );
 }
