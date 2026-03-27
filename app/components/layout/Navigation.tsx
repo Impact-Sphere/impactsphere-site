@@ -4,11 +4,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-
-interface NavLink {
-  name: string;
-  href: string;
-}
+import type { NavLink } from "@/app/lib/types";
 
 const navLinks: NavLink[] = [
   { name: "Services", href: "/#services" },
@@ -27,14 +23,12 @@ export default function Navigation() {
       className="fixed top-4 sm:top-6 lg:top-8 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl"
     >
       <div className="nav-glass rounded-[70px] px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span className="font-[family-name:var(--font-poppins)] text-lg sm:text-xl lg:text-2xl font-bold text-[#3E2A8A]">
             IMPACT SPHERE
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 lg:gap-12">
           {navLinks.map((link, index) => (
             <motion.div
@@ -54,7 +48,6 @@ export default function Navigation() {
           ))}
         </div>
 
-        {/* CTA Button */}
         <div className="hidden md:block">
           <motion.button
             type="button"
@@ -66,7 +59,6 @@ export default function Navigation() {
           </motion.button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
@@ -77,7 +69,6 @@ export default function Navigation() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <motion.div
         initial={false}
         animate={{

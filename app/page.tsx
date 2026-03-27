@@ -3,53 +3,40 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Footer from "./components/Footer";
-import Navigation from "./components/Navigation";
+import { Footer, Navigation } from "./components/layout";
+import { GlassCard, ProjectCard, SectionHeader } from "./components/ui";
+import { containerVariants, itemVariants } from "./lib/animations";
+import { projects, testimonials } from "./lib/constants";
 
-const projects = [
-  { id: 1, title: "Project 1" },
-  { id: 2, title: "Project 2" },
-  { id: 3, title: "Project 3" },
-  { id: 4, title: "Project 4" },
-  { id: 5, title: "Project 5" },
-  { id: 6, title: "Project 6" },
-];
-
-const testimonials = [
-  {
-    id: 1,
-    title: "Funding Partner",
-    text: "Impact Sphere transformed how we discover and evaluate projects. The platform's rigorous vetting process ensures our capital reaches initiatives with genuine potential for change.",
-  },
-  {
-    id: 2,
-    title: "Project Leader",
-    text: "Thanks to Impact Sphere, we secured funding within weeks instead of months. The connection to aligned investors who truly understand our mission was invaluable.",
-  },
-  {
-    id: 3,
-    title: "Corporate Sponsor",
-    text: "The transparency and detailed impact metrics provided by Impact Sphere give us confidence in our ESG investments. We've supported 12 projects through the platform.",
-  },
-];
-
-const containerVariants = {
+const heroVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
 
-const itemVariants = {
+const heroItemVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
+const logoVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
       ease: [0.22, 1, 0.36, 1] as const,
     },
   },
@@ -60,14 +47,15 @@ export default function Home() {
     <main className="min-h-screen bg-[#ECD5E8] overflow-x-hidden">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Logo */}
+        <motion.div
+          variants={heroVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-6xl mx-auto text-center"
+        >
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            variants={logoVariants}
             className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto mb-6 sm:mb-8 relative"
           >
             <Image
@@ -79,32 +67,21 @@ export default function Home() {
             />
           </motion.div>
 
-          {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            variants={heroItemVariants}
             className="heading-hero mb-4 sm:mb-6"
           >
             IMPACT SPHERE
           </motion.h1>
 
-          {/* Tagline */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            variants={heroItemVariants}
             className="font-[family-name:var(--font-poppins)] text-lg sm:text-xl lg:text-2xl text-[#55125B] mb-10 sm:mb-14 lg:mb-16 max-w-xl mx-auto"
           >
             Turning purpose into measurable impact.
           </motion.p>
 
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <motion.div variants={heroItemVariants}>
             <motion.button
               type="button"
               className="group btn-primary flex items-center gap-2 sm:gap-3 mx-auto"
@@ -115,22 +92,13 @@ export default function Home() {
               <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
           </motion.div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* Our Projects Section */}
       <section id="services" className="section-container">
         <div className="section-content">
-          <div className="glass-card p-6 sm:p-10 lg:p-12 xl:p-16">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="text-center mb-10 sm:mb-12 lg:mb-16"
-            >
-              <h2 className="heading-section opacity-80">OUR PROJECTS</h2>
-            </motion.div>
+          <GlassCard className="p-6 sm:p-10 lg:p-12 xl:p-16">
+            <SectionHeader title="OUR PROJECTS" />
 
             <motion.div
               variants={containerVariants}
@@ -140,40 +108,18 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
             >
               {projects.map((project) => (
-                <motion.div
-                  key={project.id}
-                  variants={itemVariants}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="group cursor-pointer"
-                >
-                  <div className="card-base">
-                    <div className="h-64 sm:h-72 lg:h-80 w-full bg-[rgba(244,219,240,0.94)] relative">
-                      <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 bg-[rgba(142,49,137,0.3)] flex items-center justify-center">
-                        <h3 className="heading-card text-white">
-                          {project.title}
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
+                <motion.div key={project.id} variants={itemVariants}>
+                  <ProjectCard project={project} />
                 </motion.div>
               ))}
             </motion.div>
-          </div>
+          </GlassCard>
         </div>
       </section>
 
-      {/* Feedback Section */}
       <section className="section-container">
         <div className="section-content">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center mb-10 sm:mb-12 lg:mb-16"
-          >
-            <h2 className="heading-section">FEEDBACK</h2>
-          </motion.div>
+          <SectionHeader title="FEEDBACK" />
 
           <motion.div
             variants={containerVariants}
@@ -201,10 +147,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contacts Section */}
       <section id="about" className="section-container">
         <div className="section-content">
-          <div className="glass-card p-6 sm:p-10 lg:p-12 xl:p-16">
+          <GlassCard className="p-6 sm:p-10 lg:p-12 xl:p-16">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -255,7 +200,7 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </motion.button>
             </motion.div>
-          </div>
+          </GlassCard>
         </div>
       </section>
 
