@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 
@@ -67,8 +68,16 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto mb-6 sm:mb-8 bg-[#D4A5C9] rounded-3xl"
-          />
+            className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto mb-6 sm:mb-8 relative"
+          >
+            <Image
+              src="/images/logo.svg"
+              alt="Impact Sphere Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </motion.div>
 
           {/* Main Heading */}
           <motion.h1

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
@@ -33,8 +34,15 @@ export default function AboutPage() {
                 delay: 0.2,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 bg-[#D4A5C9] rounded-2xl sm:rounded-3xl flex-shrink-0"
-            />
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 relative flex-shrink-0"
+            >
+              <Image
+                src="/images/logo.svg"
+                alt="Impact Sphere Logo"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
