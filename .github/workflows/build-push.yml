@@ -26,8 +26,8 @@ jobs:
           context: .
           push: true
           tags: |
-            registry.henriquesf.me/impact-sphere:${{ github.sha }}
-            registry.henriquesf.me/impact-sphere:latest
+            registry.henriquesf.me/impact-sphere-site:${{ github.sha }}
+            registry.henriquesf.me/impact-sphere-site:latest
       - name: Update NixOS Config
         run: |
           git config --global user.email "nix-bot@henriquesf.me"
@@ -36,8 +36,8 @@ jobs:
           git clone https://x-access-token:${{ secrets.NIX_TOKEN }}@github.com/HenriqueSFernandes/dotfiles-server.git
           cd dotfiles-server
 
-          sed -i 's|image = "registry.henriquesf.me/impact-sphere:.*";|image = "registry.henriquesf.me/impact-sphere:${{ github.sha }}";|' services/impact-sphere.nix
+          sed -i 's|image = "registry.henriquesf.me/impact-sphere-site:.*";|image = "registry.henriquesf.me/impact-sphere-site:${{ github.sha }}";|' services/impact-sphere.nix
 
           git add .
-          git commit -m "deploy: update impact-sphere to ${{ github.sha }}"
+          git commit -m "deploy: update impact-sphere-site to ${{ github.sha }}"
           git push
