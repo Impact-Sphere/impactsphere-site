@@ -49,14 +49,20 @@ export default function Navigation() {
         </div>
 
         <div className="hidden md:block">
-          <motion.button
-            type="button"
-            className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 border-accent-blue text-accent-blue text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <Link
+            key="Log in"
+            href="/login"
+            onClick={() => setIsOpen(false)}
           >
-            Log in
-          </motion.button>
+            <motion.button
+              type="button"
+              className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 border-accent-blue text-accent-blue text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Log in
+            </motion.button>
+          </Link>
         </div>
 
         <button
@@ -89,12 +95,18 @@ export default function Navigation() {
               {link.name}
             </Link>
           ))}
-          <button
-            type="button"
-            className="px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
-          >
-            Log in
-          </button>
+          <Link
+              key="Log in"
+              href="/login"
+              onClick={() => setIsOpen(false)}
+            >
+            <button
+              type="button"
+              className="px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
+            >
+                Log in
+            </button>
+          </Link>
         </div>
       </motion.div>
     </motion.nav>
