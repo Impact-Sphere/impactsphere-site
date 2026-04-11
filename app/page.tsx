@@ -7,6 +7,7 @@ import { Footer, Navigation } from "./components/layout";
 import { GlassCard, ProjectCard, SectionHeader } from "./components/ui";
 import { containerVariants, itemVariants } from "./lib/animations";
 import { projects, testimonials } from "./lib/constants";
+import ActionButton from "./components/ui/ActionButton";
 
 const heroVariants = {
   hidden: { opacity: 0 },
@@ -81,17 +82,10 @@ export default function Home() {
             Turning purpose into measurable impact.
           </motion.p>
 
-          <motion.div variants={heroItemVariants}>
-            <motion.button
-              type="button"
-              className="group btn-primary flex items-center gap-2 sm:gap-3 mx-auto"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Start project
-              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </motion.button>
-          </motion.div>
+          <ActionButton className="btn-primary flex items-center" onClick={() => {} /* <-- TODO */}>
+            Start project
+            <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
+          </ActionButton>
         </motion.div>
       </section>
 

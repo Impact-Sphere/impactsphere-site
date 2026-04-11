@@ -124,3 +124,9 @@ export const values: Value[] = [
       "We believe in the power of partnerships to amplify impact and drive innovation.",
   },
 ];
+
+export const ValidationRegex = {
+    email: /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+    password: /^.{8,}/,
+}
+

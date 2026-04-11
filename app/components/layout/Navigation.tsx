@@ -48,7 +48,7 @@ export default function Navigation() {
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block md:flex gap-2">
           <Link
             key="Log in"
             href="/login"
@@ -61,6 +61,20 @@ export default function Navigation() {
               whileTap={{ scale: 0.95 }}
             >
               Log in
+            </motion.button>
+          </Link>
+          <Link
+            key="Register"
+            href="/register"
+            onClick={() => setIsOpen(false)}
+          >
+            <motion.button
+              type="button"
+              className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 bg-accent-blue border-accent-blue text-white text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Register
             </motion.button>
           </Link>
         </div>
@@ -105,6 +119,18 @@ export default function Navigation() {
               className="px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
             >
                 Log in
+            </button>
+          </Link>
+          <Link
+              key="Register"
+              href="/register"
+              onClick={() => setIsOpen(false)}
+            >
+            <button
+              type="button"
+              className="px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
+            >
+                Register
             </button>
           </Link>
         </div>

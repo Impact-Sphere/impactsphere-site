@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Footer, Navigation } from "../components/layout";
 import { GlassCard, SectionHeader } from "../components/ui";
-import { Form } from "../components/ui/Form";
+import { Form, TextInputType } from "../components/ui/Form";
 
 const heroVariants = {
   hidden: { opacity: 0 },
@@ -28,7 +28,7 @@ const logoVariants = {
   },
 };
 
-export default function Home() {
+export default function LoginPage() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
@@ -59,17 +59,17 @@ export default function Home() {
         </motion.div>
         <div className="section-content">
           <GlassCard className="p-6 sm:p-10 lg:p-12 xl:p-16">
-            <SectionHeader title="Login - Signup" /> {/* TODO: change title style */}
+            <SectionHeader title="Login" /> {/* TODO: change title style */}
             <Form
                 inputs={[
                   {
-                    type: "text", // "email"
+                    type: TextInputType.EMAIL,
                     name: "email",
                     placeholder: "Email",
                     value: "",
                     validate: (s) => s.length ? "" : "Email is required",
                   }, {
-                    type: "password",
+                    type: TextInputType.PASSWORD,
                     name: "password",
                     placeholder: "Password",
                     value: "",
