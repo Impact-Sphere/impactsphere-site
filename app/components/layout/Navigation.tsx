@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogOut, User } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { useSession, signOut } from "@/app/lib/auth-client";
 import type { NavLink } from "@/app/lib/types";
 
 const navLinks: NavLink[] = [
@@ -14,6 +15,12 @@ const navLinks: NavLink[] = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { data: session, isPending } = useSession();
+
+  const handleLogout = async () => {
+    await signOut();
+    window.location.reload();
+  };
 
   return (
     <motion.nav
@@ -48,35 +55,57 @@ export default function Navigation() {
           ))}
         </div>
 
-        <div className="hidden md:block md:flex gap-2">
-          <Link
-            key="Log in"
-            href="/login"
-            onClick={() => setIsOpen(false)}
-          >
-            <motion.button
-              type="button"
-              className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 border-accent-blue text-accent-blue text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Log in
-            </motion.button>
-          </Link>
-          <Link
-            key="Register"
-            href="/register"
-            onClick={() => setIsOpen(false)}
-          >
-            <motion.button
-              type="button"
-              className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 bg-accent-blue border-accent-blue text-white text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Register
-            </motion.button>
-          </Link>
+        <div className="hidden md:flex items-center gap-2">
+          {isPending ? (
+            <div className="w-8 h-8 rounded-full bg-accent-purple/20 animate-pulse" />
+          ) : session ? (
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/30">
+                <User className="w-4 h-4 text-accent-purple" />
+                <span className="text-sm font-medium text-primary-purple">
+                  {session.user.name}
+                </span>
+                {(session.user as unknown as { role: string }).role === "admin" && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-accent-blue text-white font-medium">
+                    Admin
+                  </span>
+                )}
+              </div>
+              <motion.button
+                type="button"
+                onClick={handleLogout}
+                className="p-2 rounded-full text-accent-purple hover:text-red-500 hover:bg-red-50 transition-all duration-300"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                title="Sign out"
+              >
+                <LogOut className="w-5 h-5" />
+              </motion.button>
+            </div>
+          ) : (
+            <>
+              <Link href="/login">
+                <motion.button
+                  type="button"
+                  className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 border-accent-blue text-accent-blue text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Log in
+                </motion.button>
+              </Link>
+              <Link href="/register">
+                <motion.button
+                  type="button"
+                  className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 bg-accent-blue border-accent-blue text-white text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Register
+                </motion.button>
+              </Link>
+            </>
+          )}
         </div>
 
         <button
@@ -109,30 +138,51 @@ export default function Navigation() {
               {link.name}
             </Link>
           ))}
-          <Link
-              key="Log in"
-              href="/login"
-              onClick={() => setIsOpen(false)}
-            >
-            <button
-              type="button"
-              className="px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
-            >
-                Log in
-            </button>
-          </Link>
-          <Link
-              key="Register"
-              href="/register"
-              onClick={() => setIsOpen(false)}
-            >
-            <button
-              type="button"
-              className="px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
-            >
-                Register
-            </button>
-          </Link>
+          {session ? (
+            <div className="flex items-center justify-between pt-2 border-t border-accent-purple/10">
+              <div className="flex items-center gap-2">
+                <User className="w-4 h-4 text-accent-purple" />
+                <span className="text-sm font-medium text-primary-purple">
+                  {session.user.name}
+                </span>
+                {(session.user as unknown as { role: string }).role === "admin" && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-accent-blue text-white font-medium">
+                    Admin
+                  </span>
+                )}
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setIsOpen(false);
+                  handleLogout();
+                }}
+                className="flex items-center gap-1 px-4 py-2 rounded-full text-red-500 hover:bg-red-50 transition-all duration-300"
+              >
+                <LogOut className="w-4 h-4" />
+                <span className="text-sm font-medium">Sign out</span>
+              </button>
+            </div>
+          ) : (
+            <>
+              <Link href="/login" onClick={() => setIsOpen(false)}>
+                <button
+                  type="button"
+                  className="w-full px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
+                >
+                  Log in
+                </button>
+              </Link>
+              <Link href="/register" onClick={() => setIsOpen(false)}>
+                <button
+                  type="button"
+                  className="w-full px-6 py-2.5 rounded-full border-2 bg-accent-blue border-accent-blue text-white text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
+                >
+                  Register
+                </button>
+              </Link>
+            </>
+          )}
         </div>
       </motion.div>
     </motion.nav>
