@@ -74,9 +74,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 7,
-    name: "Matilde Torres",
+    name: "Matilde Tavares",
     role: "Communication and Social Media Manager",
-    image: "/images/team/matilde-torres.png",
+    image: "/images/team/matilde-tavares.png",
     bgColor: "bg-[#9B3F9B]",
   },
   {
@@ -100,13 +100,7 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/henrique-fernandes.png",
     bgColor: "bg-[#8B4F8B]",
   },
-  {
-    id: 11,
-    name: "Bruna Jardim",
-    role: "UI/UX Manager",
-    image: "/images/team/bruna-jardim.png",
-    bgColor: "bg-[#4A5BA8]",
-  },
+
 ];
 
 export const values: Value[] = [

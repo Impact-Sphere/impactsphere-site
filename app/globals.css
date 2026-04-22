@@ -14,8 +14,7 @@
   --card-pink: rgba(244, 219, 240, 0.94);
   --card-purple: rgba(142, 49, 137, 0.3);
   --glass-blue: rgba(98, 163, 223, 0.7);
-  --glass-blue2: rgba(98, 163, 223, 0.3);
-  --glass-purple: rgba(160, 87, 153, 0.8);
+  --glass-purple: rgba(97, 162, 223, 0.32);
   --text-primary: #55125b;
   --text-secondary: #a05799;
   --text-muted: #708ade;
@@ -65,7 +64,7 @@ body {
 }
 
 .glass-card {
-  background: var(--glass-blue2);
+  background: var(--glass-purple);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }

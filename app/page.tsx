@@ -160,66 +160,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      <section
-        id="about"
-        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-deep-purple"
-      >
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-8 sm:mb-10 lg:mb-12"
-          >
-            <h2 className="font-sans text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3 sm:mb-4">
-              CONTACTS
-            </h2>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.2,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="font-sans text-white text-center max-w-4xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed"
-          >
-            Lorem ipsum vibra solentia marquon estirado velum crista nevoris
-            alquantis dravium. Polenta xarvis neblor sit amet quorium estalvia
-            luxen toriam belvoro sintax. Gravion deluxa perantis morbelis
-            quantor estiva lorumex pantrix velorium sentax. Nuvia korentis
-            baltrium estova relux martionis calverum sintor valexium.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.3,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="mt-8 sm:mt-10 lg:mt-12"
-          >
-            <motion.button
-              type="button"
-              className="group btn-secondary inline-flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get in touch
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
-
+      
       <Footer />
     </main>
   );
