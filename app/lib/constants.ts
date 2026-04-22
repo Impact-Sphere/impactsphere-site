@@ -1,12 +1,14 @@
 import type { Project, TeamMember, Testimonial, Value } from "./types";
 
 export const projects: Project[] = [
-  { id: 1, title: "Project 1" },
-  { id: 2, title: "Project 2" },
-  { id: 3, title: "Project 3" },
-  { id: 4, title: "Project 4" },
-  { id: 5, title: "Project 5" },
-  { id: 6, title: "Project 6" },
+  { id: 1, title: "Project 1", image: "https://picsum.photos/400/300?random=1" },
+  { id: 2, title: "Project 2", image: "https://picsum.photos/400/300?random=2" },
+  { id: 3, title: "Project 3", image: "https://picsum.photos/400/300?random=3" },
+  { id: 4, title: "Project 4", image: "https://picsum.photos/400/300?random=4" },
+  { id: 5, title: "Project 5", image: "https://picsum.photos/400/300?random=5" },
+  { id: 6, title: "Project 6", image: "https://picsum.photos/400/300?random=6" },
+  { id: 7, title: "Project 7", image: "https://picsum.photos/400/300?random=7" },
+  { id: 8, title: "Project 8", image: "https://picsum.photos/400/300?random=8" },
 ];
 
 export const testimonials: Testimonial[] = [

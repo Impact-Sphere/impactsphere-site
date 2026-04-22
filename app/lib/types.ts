@@ -6,6 +6,7 @@ export interface NavLink {
 export interface Project {
   id: number;
   title: string;
+  image: string;
 }
 
 export interface Testimonial {

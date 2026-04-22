@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ecd5e8;
+  --background: #f1ebf0;
   --foreground: #55125b;
   --primary-purple: #55125b;
   --secondary-purple: #8e3189;
@@ -13,7 +13,8 @@
   --surface: rgba(255, 255, 255, 0.5);
   --card-pink: rgba(244, 219, 240, 0.94);
   --card-purple: rgba(142, 49, 137, 0.3);
-  --glass-blue: rgba(97, 162, 223, 0.8);
+  --glass-blue: rgba(98, 163, 223, 0.7);
+  --glass-blue2: rgba(98, 163, 223, 0.3);
   --glass-purple: rgba(160, 87, 153, 0.8);
   --text-primary: #55125b;
   --text-secondary: #a05799;
@@ -64,10 +65,9 @@ body {
 }
 
 .glass-card {
-  background: var(--glass-blue);
+  background: var(--glass-blue2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 70px;
 }
 
 .section-container {
@@ -79,7 +79,7 @@ body {
 }
 
 .btn-primary {
-  @apply px-8 sm:px-10 py-4 sm:py-5 rounded-[70px] bg-accent-blue text-text-inverse font-bold text-base sm:text-lg;
+  @apply px-8 sm:px-10 py-4 sm:py-5 rounded-[70px] bg-deep-purple text-text-inverse font-bold text-base sm:text-lg;
   box-shadow: 0px 4px 4px 0px var(--card-purple);
   transition: all var(--duration-fast) var(--ease-smooth);
 }
@@ -99,7 +99,7 @@ body {
 }
 
 .heading-hero {
-  @apply font-sans text-4xl sm:text-5xl md:text-6xl font-bold text-deep-purple;
+  @apply font-sans text-4xl sm:text-5xl md:text-7xl font-bold text-deep-purple;
 }
 
 .heading-section {
