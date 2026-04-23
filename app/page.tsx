@@ -62,7 +62,7 @@ export default function Home() {
                 src="/images/logo.svg"
                 alt="Impact Sphere Logo"
                 fill
-                className="object-contain opacity-50"
+                className="object-contain"
                 priority
               />
             </motion.div>
