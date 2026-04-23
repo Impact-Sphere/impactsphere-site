@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       <section id="projects" className="section-container">
-        <div className="max-w-[90%] mx-auto w-full">
+        <div className="max-w-[80%] mx-auto w-full">
           <GlassCard className="p-6 sm:p-10 lg:p-12 xl:p-16">
             <SectionHeader title="OUR PROJECTS" />
 
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       <section className="section-container">
-        <div className="max-w-[90%] mx-auto w-full">
+        <div className="max-w-[80%] mx-auto w-full">
           <SectionHeader title="FEEDBACK" />
 
           <motion.div
@@ -160,7 +160,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      
+
       <Footer />
     </main>
   );

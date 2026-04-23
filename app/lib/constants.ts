@@ -1,4 +1,4 @@
-import type { Project, TeamMember, Testimonial, Value } from "./types";
+import type { Project, TeamMember, Testimonial, Value, Service } from "./types";
 
 export const projects: Project[] = [
   { id: 1, title: "Project 1", image: "https://picsum.photos/400/300?random=1" },
@@ -107,16 +107,37 @@ export const values: Value[] = [
   {
     title: "Impact First",
     description:
-      "We measure success by the positive change we create in communities and lives.",
+      "We measure success by the positive change we create in communities and lives",
   },
   {
     title: "Transparency",
     description:
-      "Open communication and clear metrics build trust with our partners and stakeholders.",
+      "Open communication and clear metrics build trust with our partners and stakeholders",
   },
   {
     title: "Collaboration",
     description:
-      "We believe in the power of partnerships to amplify impact and drive innovation.",
+      "We believe in the power of partnerships to amplify impact and drive innovation",
+  },
+];
+
+
+export const services: Service[] = [
+  {
+    title: "Digital",
+    items: [
+      "Social media strategy and management",
+      "Content planning",
+      "Multimedia production",
+      "Communication strategies and action plans",
+    ],
+  },
+  {
+    title: "Partnerships",
+    items: ["Connecting NGOs, nonprofit organizations, and content creators"],
+  },
+  {
+    title: "Event Planning",
+    items: ["Logistics", "External relations", "Merch"],
   },
 ];

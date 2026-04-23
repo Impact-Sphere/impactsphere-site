@@ -27,3 +27,8 @@ export interface Value {
   title: string;
   description: string;
 }
+
+export interface Service {
+  title: string;
+  items: string[];
+}

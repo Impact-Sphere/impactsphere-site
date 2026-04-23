@@ -12,7 +12,7 @@ export default function TeamPage() {
       <Navigation />
 
       <section className="pt-32 sm:pt-36 lg:pt-44 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[80%] mx-auto">
           <div className="text-left">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
