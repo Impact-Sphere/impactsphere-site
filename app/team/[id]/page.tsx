@@ -1,6 +1,5 @@
-import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { notFound } from "next/navigation";
 import { Footer, Navigation } from "@/app/components/layout";
 import { teamMembers } from "@/app/lib/constants";
 
@@ -55,8 +54,11 @@ export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
             </div>
 
             <div className="space-y-6 text-deep-purple py-8">
-              {member.bio.split("\n\n").map((paragraph, index) => (
-                <p key={index} className="text-base sm:text-lg leading-relaxed">
+              {member.bio.split("\n\n").map((paragraph) => (
+                <p
+                  key={`${member.id}-${paragraph}`}
+                  className="text-base sm:text-lg leading-relaxed"
+                >
                   {paragraph}
                 </p>
               ))}

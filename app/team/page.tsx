@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Footer, Navigation } from "@/app/components/layout";
-import { GlassCard, TeamMemberCard } from "@/app/components/ui";
+import { TeamMemberCard } from "@/app/components/ui";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
 import { teamMembers } from "@/app/lib/constants";
 

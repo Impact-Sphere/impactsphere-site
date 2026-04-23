@@ -1,33 +1,80 @@
-import type { ProjectHome, Project, TeamMember, Testimonial, Value, Service } from "./types";
+import type {
+  Project,
+  ProjectHome,
+  Service,
+  TeamMember,
+  Testimonial,
+  Value,
+} from "./types";
 
 export const projects: ProjectHome[] = [
-  { id: 1, title: "Project 1", image: "https://picsum.photos/400/300?random=1" },
-  { id: 2, title: "Project 2", image: "https://picsum.photos/400/300?random=2" },
-  { id: 3, title: "Project 3", image: "https://picsum.photos/400/300?random=3" },
-  { id: 4, title: "Project 4", image: "https://picsum.photos/400/300?random=4" },
-  { id: 5, title: "Project 5", image: "https://picsum.photos/400/300?random=5" },
-  { id: 6, title: "Project 6", image: "https://picsum.photos/400/300?random=6" },
-  { id: 7, title: "Project 7", image: "https://picsum.photos/400/300?random=7" },
-  { id: 8, title: "Project 8", image: "https://picsum.photos/400/300?random=8" },
+  {
+    id: 1,
+    title: "Project 1",
+    image: "https://picsum.photos/400/300?random=1",
+  },
+  {
+    id: 2,
+    title: "Project 2",
+    image: "https://picsum.photos/400/300?random=2",
+  },
+  {
+    id: 3,
+    title: "Project 3",
+    image: "https://picsum.photos/400/300?random=3",
+  },
+  {
+    id: 4,
+    title: "Project 4",
+    image: "https://picsum.photos/400/300?random=4",
+  },
+  {
+    id: 5,
+    title: "Project 5",
+    image: "https://picsum.photos/400/300?random=5",
+  },
+  {
+    id: 6,
+    title: "Project 6",
+    image: "https://picsum.photos/400/300?random=6",
+  },
+  {
+    id: 7,
+    title: "Project 7",
+    image: "https://picsum.photos/400/300?random=7",
+  },
+  {
+    id: 8,
+    title: "Project 8",
+    image: "https://picsum.photos/400/300?random=8",
+  },
 ];
 
 export const featuredProjects: Project[] = [
-  { id: 1, 
-    title: "Beach clean-ups and installation of AI-powered \"Smart Bins\"",
+  {
+    id: 1,
+    title: 'Beach clean-ups and installation of AI-powered "Smart Bins"',
     image: "https://picsum.photos/400/300?random=1",
-    description: "Eco-Habit combines environmental action with cutting-edge technology. We organize monthly coastal clean-ups involving the local community and schools. Funding will be used to install 10 \"Smart Bins\" at Blue Flag beaches; these bins use AI sensors to automatically sort plastic from glass and metal, providing real-time data on the volume of waste collected for partner impact reports."
+    description:
+      'Eco-Habit combines environmental action with cutting-edge technology. We organize monthly coastal clean-ups involving the local community and schools. Funding will be used to install 10 "Smart Bins" at Blue Flag beaches; these bins use AI sensors to automatically sort plastic from glass and metal, providing real-time data on the volume of waste collected for partner impact reports.',
   },
-  { id: 2, 
-    title: "Distribution of hygiene kits and thermal blankets for the homeless population in Porto",
+  {
+    id: 2,
+    title:
+      "Distribution of hygiene kits and thermal blankets for the homeless population in Porto",
     image: "https://picsum.photos/400/300?random=1",
-    description: "Providing essential hygiene kits and thermal blankets to support Porto’s homeless population during winter months. The initiative focuses on dignity, comfort, and immediate relief through direct community outreach and volunteer-driven distribution efforts."  },
-  { id: 3, 
-    title: "Tech empowerment for children in rural areas with low digital literacy",
+    description:
+      "Providing essential hygiene kits and thermal blankets to support Porto’s homeless population during winter months. The initiative focuses on dignity, comfort, and immediate relief through direct community outreach and volunteer-driven distribution efforts.",
+  },
+  {
+    id: 3,
+    title:
+      "Tech empowerment for children in rural areas with low digital literacy",
     image: "https://picsum.photos/400/300?random=1",
-    description: "Empowering children in rural areas with low digital literacy by providing access to basic technology, learning resources, and guided workshops that build confidence and foundational digital skills for the future."  },
+    description:
+      "Empowering children in rural areas with low digital literacy by providing access to basic technology, learning resources, and guided workshops that build confidence and foundational digital skills for the future.",
+  },
 ];
-
-
 
 export const testimonials: Testimonial[] = [
   {
@@ -128,7 +175,6 @@ export const teamMembers: TeamMember[] = [
     bgColor: "bg-[#8B4F8B]",
     bio: "Henrique ensures the quality of our digital and operational tools. He tests every interaction point, checks project workflows for reliability, and helps teams fix issues before they reach partners. His attention to detail keeps every initiative stable and dependable.",
   },
-
 ];
 
 export const values: Value[] = [
@@ -148,7 +194,6 @@ export const values: Value[] = [
       "We believe in the power of partnerships to amplify impact and drive innovation",
   },
 ];
-
 
 export const services: Service[] = [
   {

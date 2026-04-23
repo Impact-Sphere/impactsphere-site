@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Footer, Navigation } from "@/app/components/layout";
-import { GlassCard, ProjectCard, SectionHeader } from "@/app/components/ui";
+import { GlassCard, SectionHeader } from "@/app/components/ui";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
 import { featuredProjects } from "@/app/lib/constants";
 
@@ -100,7 +100,7 @@ export default function ProjectsPage() {
             title="FEATURED PROJECTS"
             subtitle={
               <p className="text-body text-base sm:text-lg text-text-blue max-w-3xl mx-auto mt-4">
-                Explore active initiatives that bring ideas into action, 
+                Explore active initiatives that bring ideas into action,
                 supported by strong partnerships and thoughtful strategy.
               </p>
             }
@@ -114,7 +114,7 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="space-y-6 sm:space-y-8 lg:space-y-10"
           >
-            {featuredProjects.slice(0, 3).map((project, index) => (
+            {featuredProjects.slice(0, 3).map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
@@ -134,11 +134,9 @@ export default function ProjectsPage() {
 
                   {/* Project Content */}
                   <div className="flex-1 space-y-4">
-                    <h3 className="heading-card text-white">
-                        {project.title}
-                    </h3>
+                    <h3 className="heading-card text-white">{project.title}</h3>
                     <p className="text-white font-sans text-base sm:text-lg leading-relaxed">
-                        {project.description}
+                      {project.description}
                     </p>
                   </div>
                 </div>

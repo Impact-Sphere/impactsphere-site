@@ -28,9 +28,7 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
         </div>
         <div className="nav-glass rounded-[44px] p-4 flex-1 flex flex-col justify-center">
           <div className="text-center">
-            <h3 className="font-bold text-[#3e2a8a] mb-1">
-              {member.name}
-            </h3>
+            <h3 className="font-bold text-[#3e2a8a] mb-1">{member.name}</h3>
             <p className="font-normal text-[#3e2a8a]">{member.role}</p>
           </div>
         </div>

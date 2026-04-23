@@ -6,7 +6,6 @@ import { GlassCard } from "@/app/components/ui";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
 import { services } from "../lib/constants";
 
-
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
@@ -45,7 +44,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="space-y-6 sm:space-y-10 lg:space-y-12"
           >
-            {services.map((service, index) => (
+            {services.map((service) => (
               <motion.div key={service.title} variants={itemVariants}>
                 <GlassCard className="p-8 sm:p-12 lg:p-16 rounded-[70px] ">
                   <div className="">
@@ -53,9 +52,9 @@ export default function ServicesPage() {
                       {service.title}
                     </h2>
                     <ul className=" max-w-4xl space-y-3 sm:space-y-4 pl-6">
-                      {service.items.map((item, itemIndex) => (
+                      {service.items.map((item) => (
                         <li
-                          key={itemIndex}
+                          key={item}
                           className="flex items-start gap-3 sm:gap-4"
                         >
                           <span className="text-white text-xl sm:text-2xl mt-1">

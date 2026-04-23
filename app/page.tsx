@@ -82,27 +82,27 @@ export default function Home() {
                 TURNING PURPOSE INTO MEASURABLE IMPACT
               </motion.p>
 
-                <motion.div
-                  variants={heroItemVariants}
-                  className="flex flex-col sm:flex-row gap-4 sm:gap-20 justify-center"
+              <motion.div
+                variants={heroItemVariants}
+                className="flex flex-col sm:flex-row gap-4 sm:gap-20 justify-center"
+              >
+                <motion.button
+                  type="button"
+                  className="group btn-primary flex-1 items-center gap-2 sm:gap-3"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <motion.button
-                    type="button"
-                    className="group btn-primary flex-1 items-center gap-2 sm:gap-3"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Start project
-                  </motion.button>
-                  <motion.button
-                    type="button"
-                    className="group btn-primary flex-1 items-center gap-2 sm:gap-3"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Donate
-                  </motion.button>
-                </motion.div>
+                  Start project
+                </motion.button>
+                <motion.button
+                  type="button"
+                  className="group btn-primary flex-1 items-center gap-2 sm:gap-3"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Donate
+                </motion.button>
+              </motion.div>
             </div>
           </div>
         </motion.div>

@@ -6,7 +6,6 @@ import { Footer, Navigation } from "@/app/components/layout";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
 import { values } from "../lib/constants";
 
-
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
@@ -192,7 +191,7 @@ export default function AboutPage() {
                 {/* Number */}
                 <div className="relative mx-auto mb-8 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-accent-purple bg-background flex items-center justify-center">
                   <span className="font-sans font-bold text-5xl sm:text-6xl text-text-blue">
-                    {index+1}
+                    {index + 1}
                   </span>
                 </div>
 

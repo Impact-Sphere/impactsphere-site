@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaInstagram, FaTiktok } from "react-icons/fa";
+import Link from "next/link";
+import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -93,10 +93,16 @@ export default function Footer() {
           </Link>
 
           <div className="flex items-center gap-6 text-sm text-primary-purple justify-self-center">
-            <button className="hover:text-deep-purple transition-colors">
+            <button
+              type="button"
+              className="hover:text-deep-purple transition-colors"
+            >
               Privacy
             </button>
-            <button className="hover:text-deep-purple transition-colors">
+            <button
+              type="button"
+              className="hover:text-deep-purple transition-colors"
+            >
               Terms
             </button>
           </div>

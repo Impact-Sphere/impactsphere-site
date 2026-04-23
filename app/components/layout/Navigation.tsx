@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import type { NavLink } from "@/app/lib/types";
-import Image from "next/image";
 
 const navLinks: NavLink[] = [
   { name: "Projects", href: "/projects" },
