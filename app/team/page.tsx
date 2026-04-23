@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Footer, Navigation } from "@/app/components/layout";
 import { GlassCard, TeamMemberCard } from "@/app/components/ui";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
@@ -58,9 +59,15 @@ export default function TeamPage() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-stretch"
           >
             {teamMembers.map((member) => (
-              <motion.div key={member.id} variants={itemVariants}>
-                <TeamMemberCard member={member} />
-              </motion.div>
+              <Link
+                key={member.id}
+                href={`/team/${member.id}`}
+                className="block h-full"
+              >
+                <motion.div variants={itemVariants} className="h-full">
+                  <TeamMemberCard member={member} />
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         </div>

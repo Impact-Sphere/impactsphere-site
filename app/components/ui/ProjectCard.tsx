@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import type { Project } from "@/app/lib/types";
+import type { ProjectHome } from "@/app/lib/types";
 
 interface ProjectCardProps {
-  project: Project;
+  project: ProjectHome;
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {

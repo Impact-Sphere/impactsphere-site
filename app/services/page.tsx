@@ -47,7 +47,7 @@ export default function ServicesPage() {
           >
             {services.map((service, index) => (
               <motion.div key={service.title} variants={itemVariants}>
-                <GlassCard className="p-8 sm:p-12 lg:p-16 rounded-[70px] nav-glass">
+                <GlassCard className="p-8 sm:p-12 lg:p-16 rounded-[70px] ">
                   <div className="">
                     <h2 className="heading-section mb-6 sm:mb-8 lg:mb-10 !text-white">
                       {service.title}
