@@ -3,94 +3,207 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Footer, Navigation } from "@/app/components/layout";
-import { GlassCard, SectionHeader } from "@/app/components/ui";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
-import { values } from "@/app/lib/constants";
+import { values } from "../lib/constants";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
 
-      <section className="min-h-[40vh] sm:min-h-[50vh] flex flex-col items-center justify-center pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
-            <motion.div
+      {/* Main Content */}
+      <div className="pt-32 sm:pt-36 lg:pt-44 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[80%] mx-auto">
+          {/* Title Section */}
+          <div className="mb-8 sm:mb-12 lg:mb-16">
+            <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="relative"
+              className="heading-hero mb-4 sm:mb-6"
             >
-              <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-accent-purple mb-3 sm:mb-4">
-                ABOUT US
-              </h1>
-            </motion.div>
-
+              ABOUT US
+            </motion.h1>
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
               transition={{
                 duration: 0.8,
                 delay: 0.2,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 relative flex-shrink-0"
+              className="w-32 h-1.5 bg-accent-purple mb-8 sm:mb-10 lg:mb-12 rounded-full"
+            />
+          </div>
+
+          {/* Hero Section */}
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative w-full lg:w-[627px] h-[470px] rounded-[25px] overflow-hidden"
             >
               <Image
-                src="/images/logo.svg"
-                alt="Impact Sphere Logo"
+                src="https://picsum.photos/400/300?random=1"
+                alt="About Us Image"
                 fill
-                className="object-contain"
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </motion.div>
-          </div>
-        </div>
-      </section>
 
-      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
-        <div className="section-content">
-          <GlassCard>
-            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-text-blue leading-relaxed">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="flex-1 text-deep-purple font-sans font-semibold text-lg sm:text-xl lg:text-2xl leading-relaxed"
+            >
               At ImpactSphere, we empower Human Rights NGOs to move beyond
               limitations and into meaningful action. By providing strategic
               guidance, professional communication, and access to the right
               partnerships, we transform under-resourced initiatives into
               structured, visible, and impactful projects that create real,
               measurable change.
-            </p>
-          </GlassCard>
-        </div>
-      </section>
+            </motion.div>
+          </div>
 
-      <section className="section-container">
-        <div className="section-content">
-          <SectionHeader title="OUR VALUES" />
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="flex-1 text-deep-purple font-sans font-semibold text-lg sm:text-xl lg:text-2xl leading-relaxed mb-4 sm:mb-8 lg:mb-12"
+          >
+            Lorem ipsum vibra solentia marquon estirado velum crista nevoris
+            alquantis dravium. Polenta xarvis neblor sit amet quorium estalvia
+            luxen toriam belvoro sintax. Gravion deluxa perantis morbelis
+            quantor estiva lorumex pantrix velorium sentax. Nuvia korentis
+            baltrium estova relux martionis calverum sintor valexium.
+          </motion.div>
 
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 mb-16 sm:mb-20 lg:mb-24"
           >
-            {values.map((value) => (
+            <motion.div
+              variants={itemVariants}
+              className="w-full max-w-[382px] h-[287px] rounded-[25px] overflow-hidden  mx-auto relative"
+            >
+              <Image
+                src="https://picsum.photos/400/300?random=1"
+                alt="About Us Image"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="w-full max-w-[382px] h-[287px] rounded-[25px] overflow-hidden  mx-auto relative"
+            >
+              <Image
+                src="https://picsum.photos/400/300?random=1"
+                alt="About Us Image2"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="w-full max-w-[382px] h-[287px] rounded-[25px] overflow-hidden  mx-auto relative"
+            >
+              {" "}
+              <Image
+                src="https://picsum.photos/400/300?random=1"
+                alt="About Us Image3"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Values Section */}
+          <div className="mb-16 sm:mb-20 lg:mb-24">
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="heading-hero mb-4 sm:mb-6"
+            >
+              OUR VALUES
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              whileInView={{ opacity: 1, scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="w-32 h-1.5 bg-accent-purple rounded-full mb-12 sm:mb-16 lg:mb-20"
+            />
+          </div>
+
+          {/* Values Grid */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 mb-16 sm:mb-20 lg:mb-24"
+          >
+            {values.map((value, index) => (
               <motion.div
                 key={value.title}
                 variants={itemVariants}
-                whileHover={{ y: -8 }}
-                className="text-center"
+                className="relative text-center pt-10"
               >
-                <h3 className="heading-card text-primary-purple mb-3 sm:mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-body text-sm sm:text-base">
+                {/* Connector Lines */}
+                {index !== 0 && (
+                  <div className="hidden md:block absolute left-0 top-[5.4rem] h-px w-24 bg-accent-purple -translate-x-full" />
+                )}
+                {index !== 2 && (
+                  <div className="hidden md:block absolute right-0 top-[5.4rem] h-px w-24 bg-accent-purple translate-x-full" />
+                )}
+
+                {/* Number */}
+                <div className="relative mx-auto mb-8 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-accent-purple bg-background flex items-center justify-center">
+                  <span className="font-sans font-bold text-5xl sm:text-6xl text-text-blue">
+                    {index + 1}
+                  </span>
+                </div>
+
+                {/* Text */}
+                <div className="text-deep-purple font-sans font-semibold text-lg sm:text-xl leading-relaxed">
                   {value.description}
-                </p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
-      </section>
+      </div>
 
       <Footer />
     </main>

@@ -3,9 +3,17 @@ export interface NavLink {
   href: string;
 }
 
+export interface ProjectHome {
+  id: number;
+  title: string;
+  image: string;
+}
+
 export interface Project {
   id: number;
   title: string;
+  image: string;
+  description: string;
 }
 
 export interface Testimonial {
@@ -20,9 +28,15 @@ export interface TeamMember {
   role: string;
   image: string;
   bgColor: string;
+  bio: string;
 }
 
 export interface Value {
   title: string;
   description: string;
+}
+
+export interface Service {
+  title: string;
+  items: string[];
 }

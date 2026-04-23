@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Footer, Navigation } from "@/app/components/layout";
-import { GlassCard, TeamMemberCard } from "@/app/components/ui";
+import { TeamMemberCard } from "@/app/components/ui";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
 import { teamMembers } from "@/app/lib/constants";
 
@@ -11,32 +12,40 @@ export default function TeamPage() {
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
 
-      <section className="min-h-[40vh] sm:min-h-[50vh] flex flex-col items-center justify-center pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
-          >
-            <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-text-blue mb-3 sm:mb-4">
+      <section className="pt-32 sm:pt-36 lg:pt-44 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[80%] mx-auto">
+          <div className="text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="heading-hero mb-4 sm:mb-6"
+            >
               OUR TEAM
-            </h1>
-            <div className="w-48 sm:w-56 lg:w-72 h-1.5 sm:h-2 bg-glass-purple rounded-full mx-auto" />
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
-        <div className="section-content">
-          <GlassCard className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8">
-            <h2 className="font-sans text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold text-deep-purple text-center md:text-left">
-              Get to know our team
-            </h2>
-            <p className="font-serif text-lg sm:text-xl lg:text-2xl text-accent-purple italic text-center md:text-right">
-              We turn purpose into impact
-            </p>
-          </GlassCard>
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="w-32 h-1.5 bg-accent-purple mb-8 sm:mb-10 lg:mb-12 rounded-full"
+            />
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.4,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="font-sans text-xl sm:text-2xl lg:text-3xl text-accent-purple font-bold max-w-4xl"
+            >
+              WE TURN PURPOSE INTO MEASURABLE IMPACT
+            </motion.p>
+          </div>
         </div>
       </section>
 
@@ -47,12 +56,18 @@ export default function TeamPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-stretch"
           >
             {teamMembers.map((member) => (
-              <motion.div key={member.id} variants={itemVariants}>
-                <TeamMemberCard member={member} />
-              </motion.div>
+              <Link
+                key={member.id}
+                href={`/team/${member.id}`}
+                className="block h-full"
+              >
+                <motion.div variants={itemVariants} className="h-full">
+                  <TeamMemberCard member={member} />
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         </div>
