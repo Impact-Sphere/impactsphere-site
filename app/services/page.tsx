@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Footer, Navigation } from "@/app/components/layout";
 import { services } from "../lib/constants";
 

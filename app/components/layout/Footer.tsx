@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 
 export default function Footer() {
@@ -41,20 +41,19 @@ export default function Footer() {
           >
             <div className="space-y-2 text-left">
               <div className="flex items-center gap-4 font-semibold">
-                  <MdEmail className="text-white/70" size={24} />
-                  <a href="mailto:hello@impactsphere.com">
-                    hello@impactsphere.com
-                  </a>
+                <MdEmail className="text-white/70" size={24} />
+                <a href="mailto:hello@impactsphere.com">
+                  hello@impactsphere.com
+                </a>
               </div>
               <div className="flex items-center gap-4 font-semibold">
-                  <MdPhone className="text-white/70" size={24} />
-                  <a href="tel:+441234567890">
-                     +351 982846193
-                  </a>
+                <MdPhone className="text-white/70" size={24} />
+                <a href="tel:+441234567890">+351 982846193</a>
               </div>
             </div>
             <div className="text-left sm:text-right sm:max-w-md">
-                We are always open to connecting with organizations, partners, and creators who share our commitment to meaningful impact.
+              We are always open to connecting with organizations, partners, and
+              creators who share our commitment to meaningful impact.
             </div>
           </motion.div>
 

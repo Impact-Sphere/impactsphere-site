@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Footer, Navigation } from "@/app/components/layout";
-import { GlassCard, SectionHeader } from "@/app/components/ui";
+import { SectionHeader } from "@/app/components/ui";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
 import { featuredProjects } from "@/app/lib/constants";
 
@@ -48,9 +48,9 @@ export default function ProjectsPage() {
                   Turning NGO initiatives into visible, company-backed impact.
                 </h2>
                 <p className="text-text-blue font-sans text-lg sm:text-xl leading-relaxed mt-4">
-                  We connect nonprofit organizations with mission-aligned companies
-                  to create stronger, more sustainable social projects that
-                  achieve measurable results.
+                  We connect nonprofit organizations with mission-aligned
+                  companies to create stronger, more sustainable social projects
+                  that achieve measurable results.
                 </p>
               </motion.div>
 
@@ -88,9 +88,7 @@ export default function ProjectsPage() {
                 <p className="text-xs uppercase tracking-[0.35em] text-white/80 mb-2">
                   FEATURED PROJECT
                 </p>
-                <h3 className="heading-card text-white">
-                  Porto Care
-                </h3>
+                <h3 className="heading-card text-white">Porto Care</h3>
               </div>
             </motion.div>
           </div>
@@ -160,8 +158,9 @@ export default function ProjectsPage() {
                     Strengthening advocacy
                   </p>
                   <p className="text-body text-sm sm:text-base leading-relaxed text-text-blue/80">
-                    Our project work raises visibility for NGOs and makes it easier
-                    for companies to partner with social causes that need support.
+                    Our project work raises visibility for NGOs and makes it
+                    easier for companies to partner with social causes that need
+                    support.
                   </p>
                 </div>
 

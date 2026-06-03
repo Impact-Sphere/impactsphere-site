@@ -27,7 +27,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
         <div className="bg-[#95BDE5] h-20 sm:h-24 flex items-center justify-center ">
-          <h3 className="text-[#F2ECF1] text-center font-semibold">{project.title}</h3>
+          <h3 className="text-[#F2ECF1] text-center font-semibold">
+            {project.title}
+          </h3>
         </div>
       </div>
     </motion.div>

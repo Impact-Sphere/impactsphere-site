@@ -87,7 +87,11 @@ export default function AboutPage() {
             }}
             className="flex-1 text-deep-purple font-sans font-semibold text-lg sm:text-xl lg:text-2xl leading-relaxed mb-4 sm:mb-8 lg:mb-12"
           >
-          What sets us apart is our focus on specific causes and on a more equitable model of support. We work with Human Rights-related niches and rely on public funding and partnerships with companies that share our values, allowing NGOs to access professional support without direct costs.
+            What sets us apart is our focus on specific causes and on a more
+            equitable model of support. We work with Human Rights-related niches
+            and rely on public funding and partnerships with companies that
+            share our values, allowing NGOs to access professional support
+            without direct costs.
           </motion.div>
 
           <motion.div

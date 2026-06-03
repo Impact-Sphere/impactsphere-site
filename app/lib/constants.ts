@@ -10,17 +10,20 @@ import type {
 export const projects: ProjectHome[] = [
   {
     id: 1,
-    title: "Safe Spaces and Inclusion: LGBTQ+ Community Support and Empowerment",
+    title:
+      "Safe Spaces and Inclusion: LGBTQ+ Community Support and Empowerment",
     image: "/images/projects/1.png",
   },
   {
     id: 2,
-    title: "Distribution of hygiene kits and thermal blankets for the homeless population in Porto",
+    title:
+      "Distribution of hygiene kits and thermal blankets for the homeless population in Porto",
     image: "/images/projects/2.png",
   },
   {
     id: 3,
-    title: "Tech empowerment for children in rural areas with low digital literacy",
+    title:
+      "Tech empowerment for children in rural areas with low digital literacy",
     image: "/images/projects/3.png",
   },
   {
@@ -45,7 +48,8 @@ export const projects: ProjectHome[] = [
   },
   {
     id: 8,
-    title: "Access to Justice and Legal Empowerment Programme for Vulnerable Populations",
+    title:
+      "Access to Justice and Legal Empowerment Programme for Vulnerable Populations",
     image: "/images/projects/8.png",
   },
 ];
@@ -53,21 +57,27 @@ export const projects: ProjectHome[] = [
 export const featuredProjects: Project[] = [
   {
     id: 1,
-    title: "Safe Spaces and Inclusion: LGBTQ+ Community Support and Empowerment",
+    title:
+      "Safe Spaces and Inclusion: LGBTQ+ Community Support and Empowerment",
     image: "/images/projects/1.png",
-    description: "LGBTQ+ Community Support focuses on promoting inclusion, safety, and equal opportunities for LGBTQ+ individuals. We organize support groups, awareness sessions, and safe community spaces that encourage connection and empowerment. Funding will help expand outreach, strengthen support services, and improve access to resources for those facing discrimination or social isolation, fostering dignity, acceptance, and long-term social impact."
+    description:
+      "LGBTQ+ Community Support focuses on promoting inclusion, safety, and equal opportunities for LGBTQ+ individuals. We organize support groups, awareness sessions, and safe community spaces that encourage connection and empowerment. Funding will help expand outreach, strengthen support services, and improve access to resources for those facing discrimination or social isolation, fostering dignity, acceptance, and long-term social impact.",
   },
   {
     id: 2,
-    title: "Distribution of hygiene kits and thermal blankets for the homeless population in Porto",
+    title:
+      "Distribution of hygiene kits and thermal blankets for the homeless population in Porto",
     image: "/images/projects/2.png",
-    description: "Porto Care Initiative addresses the urgent needs of the city’s homeless population through community-driven support. We organize regular outreach efforts to distribute hygiene kits and thermal blankets, ensuring dignity, comfort, and protection during colder months. Funding will expand our impact, reaching more individuals across Porto while improving the quality and consistency of supplies, delivering measurable social impact and stronger community engagement."
+    description:
+      "Porto Care Initiative addresses the urgent needs of the city’s homeless population through community-driven support. We organize regular outreach efforts to distribute hygiene kits and thermal blankets, ensuring dignity, comfort, and protection during colder months. Funding will expand our impact, reaching more individuals across Porto while improving the quality and consistency of supplies, delivering measurable social impact and stronger community engagement.",
   },
   {
     id: 3,
-    title: "Tech empowerment for children in rural areas with low digital literacy",
+    title:
+      "Tech empowerment for children in rural areas with low digital literacy",
     image: "/images/projects/3.png",
-    description: "Rural Tech Empowerment bridges the digital divide for children in underserved rural communities. We run hands-on learning sessions and provide access to essential digital tools, building foundational technology and online literacy skills. Funding will expand our reach, enabling more children to benefit from structured training and better educational resources, fostering confidence, innovation, and long-term impact."
+    description:
+      "Rural Tech Empowerment bridges the digital divide for children in underserved rural communities. We run hands-on learning sessions and provide access to essential digital tools, building foundational technology and online literacy skills. Funding will expand our reach, enabling more children to benefit from structured training and better educational resources, fostering confidence, innovation, and long-term impact.",
   },
 ];
 
