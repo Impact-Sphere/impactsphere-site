@@ -38,5 +38,5 @@ export interface Value {
 
 export interface Service {
   title: string;
-  items: string[];
+  description: string;
 }

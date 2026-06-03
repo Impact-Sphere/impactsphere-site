@@ -23,6 +23,8 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
               fill
               className="object-cover object-top"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              loading="eager"
+              priority
             />
           </div>
         </div>

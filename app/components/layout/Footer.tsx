@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { MdEmail, MdPhone } from "react-icons/md";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,7 +27,8 @@ export default function Footer() {
             </h2>
           </motion.div>
 
-          <motion.p
+          {/* Fixed the multi-line className formatting here */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -35,14 +37,26 @@ export default function Footer() {
               delay: 0.2,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="font-sans text-white text-center max-w-4xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed"
+            className="flex flex-col gap-8 items-center sm:flex-row sm:justify-between font-sans text-white max-w-7xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed"
           >
-            Lorem ipsum vibra solentia marquon estirado velum crista nevoris
-            alquantis dravium. Polenta xarvis neblor sit amet quorium estalvia
-            luxen toriam belvoro sintax. Gravion deluxa perantis morbelis
-            quantor estiva lorumex pantrix velorium sentax. Nuvia korentis
-            baltrium estova relux martionis calverum sintor valexium.
-          </motion.p>
+            <div className="space-y-2 text-left">
+              <div className="flex items-center gap-4 font-semibold">
+                  <MdEmail className="text-white/70" size={24} />
+                  <a href="mailto:hello@impactsphere.com">
+                    hello@impactsphere.com
+                  </a>
+              </div>
+              <div className="flex items-center gap-4 font-semibold">
+                  <MdPhone className="text-white/70" size={24} />
+                  <a href="tel:+441234567890">
+                     +351 982846193
+                  </a>
+              </div>
+            </div>
+            <div className="text-left sm:text-right sm:max-w-md">
+                We are always open to connecting with organizations, partners, and creators who share our commitment to meaningful impact.
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -56,28 +70,12 @@ export default function Footer() {
             className="mt-8 flex items-center justify-center gap-6"
           >
             <Link
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/impactsphere26"
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
             >
               <FaInstagram size={20} />
-            </Link>
-            <Link
-              href="https://www.tiktok.com"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-            >
-              <FaTiktok size={20} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-            >
-              <FaLinkedin size={20} />
             </Link>
           </motion.div>
         </div>

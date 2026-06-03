@@ -22,7 +22,7 @@ export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
   const lastName = lastParts.join(" ");
 
   return (
-    <main className="min-h-screen bg-background overflow-x-hidden">
+    <main className="relative min-h-screen bg-background overflow-x-hidden">
       <Navigation />
 
       <div className="pt-32 sm:pt-36 lg:pt-44 px-4 sm:px-6 lg:px-8">
@@ -40,20 +40,20 @@ export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
             </p>
           </div>
 
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-start">
-            <div className="rounded-[40px] bg-[#d6e2fb] p-6 sm:p-8 lg:p-10">
-              <div className="relative aspect-square w-full rounded-[40px] overflow-hidden">
+          <div className="grid gap-10 lg:grid-cols-[0.70fr_1.30fr] items-stretch">
+            <div className="bg-[#d6e2fb] rounded-[40px] overflow-hidden shadow-[0_40px_80px_rgba(133,98,183,0.18)] h-full">
+              <div className="relative w-full h-full min-h-[470px] md:min-h-[550px]">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-contain object-center"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
             </div>
 
-            <div className="space-y-6 text-deep-purple py-8">
+            <div className="flex flex-col justify-center space-y-6 font-semibold text-deep-purple py-6 lg:py-8">
               {member.bio.split("\n\n").map((paragraph) => (
                 <p
                   key={`${member.id}-${paragraph}`}

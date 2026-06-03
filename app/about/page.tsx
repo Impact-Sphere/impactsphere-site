@@ -12,7 +12,7 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Main Content */}
-      <div className="pt-32 sm:pt-36 lg:pt-44 px-4 sm:px-6 lg:px-8">
+      <div className="relative pt-32 sm:pt-36 lg:pt-44 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[80%] mx-auto">
           {/* Title Section */}
           <div className="mb-8 sm:mb-12 lg:mb-16">
@@ -47,8 +47,8 @@ export default function AboutPage() {
               className="relative w-full lg:w-[627px] h-[470px] rounded-[25px] overflow-hidden"
             >
               <Image
-                src="https://picsum.photos/400/300?random=1"
-                alt="About Us Image"
+                src="/images/team/team.JPG"
+                alt="Team Image"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -87,11 +87,7 @@ export default function AboutPage() {
             }}
             className="flex-1 text-deep-purple font-sans font-semibold text-lg sm:text-xl lg:text-2xl leading-relaxed mb-4 sm:mb-8 lg:mb-12"
           >
-            Lorem ipsum vibra solentia marquon estirado velum crista nevoris
-            alquantis dravium. Polenta xarvis neblor sit amet quorium estalvia
-            luxen toriam belvoro sintax. Gravion deluxa perantis morbelis
-            quantor estiva lorumex pantrix velorium sentax. Nuvia korentis
-            baltrium estova relux martionis calverum sintor valexium.
+          What sets us apart is our focus on specific causes and on a more equitable model of support. We work with Human Rights-related niches and rely on public funding and partnerships with companies that share our values, allowing NGOs to access professional support without direct costs.
           </motion.div>
 
           <motion.div
@@ -106,7 +102,7 @@ export default function AboutPage() {
               className="w-full max-w-[382px] h-[287px] rounded-[25px] overflow-hidden  mx-auto relative"
             >
               <Image
-                src="https://picsum.photos/400/300?random=1"
+                src="/images/team/inf-team.JPG"
                 alt="About Us Image"
                 fill
                 className="object-cover"
@@ -119,7 +115,7 @@ export default function AboutPage() {
               className="w-full max-w-[382px] h-[287px] rounded-[25px] overflow-hidden  mx-auto relative"
             >
               <Image
-                src="https://picsum.photos/400/300?random=1"
+                src="/images/team/mul-team.jpeg"
                 alt="About Us Image2"
                 fill
                 className="object-cover"
@@ -133,7 +129,7 @@ export default function AboutPage() {
             >
               {" "}
               <Image
-                src="https://picsum.photos/400/300?random=1"
+                src="/images/team/fep-team.JPG"
                 alt="About Us Image3"
                 fill
                 className="object-cover"
