@@ -2,6 +2,8 @@
 
 The public landing page and marketing site for [ImpactSphere](https://github.com/impact-Sphere/impactsphere-dash) - a Next.js web platform that connects NGOs with companies for funding and partnerships.
 
+**Live Site:** [https://impactsphere.org](https://impactsphere.org)
+
 ## What is ImpactSphere?
 
 ImpactSphere bridges the gap between non-profits and corporate social responsibility (CSR) initiatives. NGOs publish impact projects and seek donations, while companies discover and sponsor initiatives aligned with their values.
