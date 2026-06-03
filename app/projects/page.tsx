@@ -144,7 +144,7 @@ export default function ProjectsPage() {
           </motion.div>
 
           <div className="mt-16">
-            <GlassCard className="rounded-[70px] p-8 sm:p-10 lg:p-12">
+            <div className="rounded-[70px] p-8 sm:p-10 lg:p-12">
               <div className="grid gap-6 lg:grid-cols-3">
                 <div className="space-y-4">
                   <p className="text-xs uppercase tracking-[0.3em] text-accent-purple">
@@ -175,7 +175,7 @@ export default function ProjectsPage() {
                   </p>
                 </div>
               </div>
-            </GlassCard>
+            </div>
           </div>
         </div>
       </div>
