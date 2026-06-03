@@ -1,5 +1,10 @@
 # ImpactSphere Site
 
+<p align="center">
+    <a href="https://status.henriquesf.me/"><img alt="Status" src="https://uptime.henriquesf.me/api/badge/6/uptime?labelColor=D3A8D1&labelValueColor=3E2A8A&color=3E2A8A"></a>
+</p>
+
+
 The public landing page and marketing site for [ImpactSphere](https://github.com/impact-Sphere/impactsphere-dash) - a Next.js web platform that connects NGOs with companies for funding and partnerships.
 
 **Live Site:** [https://impactsphere.org](https://impactsphere.org)
