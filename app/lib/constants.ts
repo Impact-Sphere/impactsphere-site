@@ -10,87 +10,92 @@ import type {
 export const projects: ProjectHome[] = [
   {
     id: 1,
-    title: "Project 1",
-    image: "https://picsum.photos/400/300?random=1",
+    title:
+      "Safe Spaces and Inclusion: LGBTQ+ Community Support and Empowerment",
+    image: "/images/projects/1.png",
   },
   {
     id: 2,
-    title: "Project 2",
-    image: "https://picsum.photos/400/300?random=2",
+    title:
+      "Distribution of hygiene kits and thermal blankets for the homeless population in Porto",
+    image: "/images/projects/2.png",
   },
   {
     id: 3,
-    title: "Project 3",
-    image: "https://picsum.photos/400/300?random=3",
+    title:
+      "Tech empowerment for children in rural areas with low digital literacy",
+    image: "/images/projects/3.png",
   },
   {
     id: 4,
-    title: "Project 4",
-    image: "https://picsum.photos/400/300?random=4",
+    title: "Intercultural Dialogue and Human Rights Education Initiative",
+    image: "/images/projects/4-2.png",
   },
   {
     id: 5,
-    title: "Project 5",
-    image: "https://picsum.photos/400/300?random=5",
+    title: "Anti-Discrimination and Equality Promotion Framework",
+    image: "/images/projects/5.png",
   },
   {
     id: 6,
-    title: "Project 6",
-    image: "https://picsum.photos/400/300?random=6",
+    title: "SafeSpace: Trans Community Support Program",
+    image: "/images/projects/6.png",
   },
   {
     id: 7,
-    title: "Project 7",
-    image: "https://picsum.photos/400/300?random=7",
+    title: "Human Rights Awareness and Civic Engagement Programme",
+    image: "/images/projects/7.png",
   },
   {
     id: 8,
-    title: "Project 8",
-    image: "https://picsum.photos/400/300?random=8",
+    title:
+      "Access to Justice and Legal Empowerment Programme for Vulnerable Populations",
+    image: "/images/projects/8.png",
   },
 ];
 
 export const featuredProjects: Project[] = [
   {
     id: 1,
-    title: 'Beach clean-ups and installation of AI-powered "Smart Bins"',
-    image: "https://picsum.photos/400/300?random=1",
+    title:
+      "Safe Spaces and Inclusion: LGBTQ+ Community Support and Empowerment",
+    image: "/images/projects/1.png",
     description:
-      'Eco-Habit combines environmental action with cutting-edge technology. We organize monthly coastal clean-ups involving the local community and schools. Funding will be used to install 10 "Smart Bins" at Blue Flag beaches; these bins use AI sensors to automatically sort plastic from glass and metal, providing real-time data on the volume of waste collected for partner impact reports.',
+      "LGBTQ+ Community Support focuses on promoting inclusion, safety, and equal opportunities for LGBTQ+ individuals. We organize support groups, awareness sessions, and safe community spaces that encourage connection and empowerment. Funding will help expand outreach, strengthen support services, and improve access to resources for those facing discrimination or social isolation, fostering dignity, acceptance, and long-term social impact.",
   },
   {
     id: 2,
     title:
       "Distribution of hygiene kits and thermal blankets for the homeless population in Porto",
-    image: "https://picsum.photos/400/300?random=1",
+    image: "/images/projects/2.png",
     description:
-      "Providing essential hygiene kits and thermal blankets to support Porto’s homeless population during winter months. The initiative focuses on dignity, comfort, and immediate relief through direct community outreach and volunteer-driven distribution efforts.",
+      "Porto Care Initiative addresses the urgent needs of the city’s homeless population through community-driven support. We organize regular outreach efforts to distribute hygiene kits and thermal blankets, ensuring dignity, comfort, and protection during colder months. Funding will expand our impact, reaching more individuals across Porto while improving the quality and consistency of supplies, delivering measurable social impact and stronger community engagement.",
   },
   {
     id: 3,
     title:
       "Tech empowerment for children in rural areas with low digital literacy",
-    image: "https://picsum.photos/400/300?random=1",
+    image: "/images/projects/3.png",
     description:
-      "Empowering children in rural areas with low digital literacy by providing access to basic technology, learning resources, and guided workshops that build confidence and foundational digital skills for the future.",
+      "Rural Tech Empowerment bridges the digital divide for children in underserved rural communities. We run hands-on learning sessions and provide access to essential digital tools, building foundational technology and online literacy skills. Funding will expand our reach, enabling more children to benefit from structured training and better educational resources, fostering confidence, innovation, and long-term impact.",
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    title: "Funding Partner",
-    text: "Impact Sphere transformed how we discover and evaluate projects. The platform's rigorous vetting process ensures our capital reaches initiatives with genuine potential for change.",
+    title: "Bridge of Hope",
+    text: "“An innovative proposal that combines social purpose, strategy, and communication in an impressive way.”",
   },
   {
     id: 2,
-    title: "Project Leader",
-    text: "Thanks to Impact Sphere, we secured funding within weeks instead of months. The connection to aligned investors who truly understand our mission was invaluable.",
+    title: "Justice Across Borders",
+    text: "“This initiative stands out for its ability to connect companies and causes with clarity and responsibility. ImpactSphere Agency creates a structure where socially driven projects can grow with greater visibility and lasting impact.”",
   },
   {
     id: 3,
-    title: "Corporate Sponsor",
-    text: "The transparency and detailed impact metrics provided by Impact Sphere give us confidence in our ESG investments. We've supported 12 projects through the platform.",
+    title: "HD Alliance",
+    text: "“ImpactSphere Agency stands out for turning meaningful ideas into concrete and well-structured projects.”",
   },
 ];
 
@@ -99,81 +104,89 @@ export const teamMembers: TeamMember[] = [
     id: 1,
     name: "Bárbara Sequeira",
     role: "CEO",
-    image: "/images/team/barbara-sequeira.png",
+    image: "/images/team/ceo-barbara.png",
     bgColor: "bg-[#8B2F8B]",
-    bio: "Bárbara Sequeira is a purpose-driven leader with a strong commitment to Human Rights and social impact. She is deeply motivated by the belief that meaningful change comes from action, not just intention, and is known for her ability to turn ideas into structured, tangible outcomes. She combines strategic thinking with creativity and a results-oriented mindset, allowing her to identify opportunities, connect people and drive projects forward. Her work is guided by a strong sense of responsibility and a desire to create lasting impact.",
+    bio: "I’m Bárbara Sequeira, I’m 22 years old, and I’m the CEO at ImpactSphere. Human rights and social impact are causes I care deeply about and I’m driven by the opportunity to turn ideas into impactful outcomes.\n\nI value collaboration, innovation and continuous learning, always looking for new ways to grow and contribute to initiatives that make a real difference in society.\n\nIn my free time, I enjoy going to demonstrations and reading, as well as exploring new ideas and staying engaged with causes I care about.",
   },
   {
     id: 2,
     name: "Xavier Martins",
     role: "CTO",
-    image: "/images/team/xavier-martins.png",
+    image: "/images/team/cto-xavier.png",
     bgColor: "bg-[#9B4F9B]",
-    bio: "Xavier leads technology strategy with a clear focus on building scalable tools that support community-driven initiatives. He brings deep technical expertise to each project, pairing innovative solutions with practical implementation plans. Xavier enjoys translating complex challenges into user-centered systems that empower NGOs and partners to act faster and more confidently.",
+    bio: "I’m Xavier Martins, I’m 21 years old and I’m the CTO at ImpactSphere. I believe that the power of helping others is truly meaningful, and being part of a team that contributes to causes focused on human rights is extremely valuable to me. It’s motivating to work on technological solutions that can have a real impact on the lives of people and organizations that need it most.\n\nI focus on building a strong and adaptable technical foundation, ensuring that innovation is not only possible but sustainable over time. I value aligning technology with real needs, translating complex ideas into practical solutions that support the team and the project’s growth. \n\nIn my free time, I enjoy practicing and watching sports, learning more about technology, and participating in volunteer projects, which I find very rewarding.",
   },
   {
     id: 3,
     name: "Pedro Andrade",
     role: "CFO",
-    image: "/images/team/pedro-andrade.png",
+    image: "/images/team/cfo-pedro.png",
     bgColor: "bg-[#7B6CAC]",
-    bio: "Pedro ensures our financial strategy supports sustainable impact. He manages budgets with precision and helps partners stretch resources further by identifying cost-effective opportunities, funding pathways, and accountability measures. Pedro believes transparency and financial clarity are essential to building long-term trust in every initiative.",
+    bio: "I’m Pedro Andrade, I’m 21 years old and I’m the CFO at ImpactSphere. I strongly believe in the project and the mission we are building, with a particular motivation to support NGOs and contribute to causes that create meaningful impact.\n\nI value financial discipline, strategic decision-making, and ensuring that resources are used efficiently to support sustainable growth. I’m committed to helping the team deliver a project that is both innovative and truly useful.\n\nOutside of my professional role, I enjoy playing football, swimming, and spending quality time with friends.",
   },
   {
     id: 4,
     name: "Rita Monteiro",
     role: "Chief Strategy and Impact Officer",
-    image: "/images/team/rita-monteiro.png",
+    image: "/images/team/csio-rita.png",
     bgColor: "bg-[#5B5C98]",
-    bio: "Rita designs strategic frameworks that maximize the impact of our programs. She blends research, stakeholder collaboration and outcome-oriented planning so every project is aligned with real community needs. Rita’s work is about creating pathways from ambition to measurable change.",
+    bio: "I’m Rita Monteiro, I’m 23 years old, and I’m the Director of Strategy and Impact at ImpactSphere. I believe strongly in this project because I’ve had close contact with the reality of non-profit organizations through previous experiences and my volunteer work.\n\nThis exposure has shown me the significant potential many associations have, which is often limited by a lack of resources and strategic planning. ImpactSphere represents a meaningful solution to support these organizations and help maximize their impact.I value purpose-driven work and strive to contribute to initiatives that create lasting, positive change in society.\n\nIn my free time, I enjoy traveling and I’m passionate about reading and discussing books (always open to new recommendations).",
   },
   {
     id: 5,
     name: "José Sousa",
     role: "Implementation Manager",
-    image: "/images/team/jose-sousa.png",
+    image: "/images/team/implementation-jose.png",
     bgColor: "bg-[#5B6BA8]",
-    bio: "José oversees project delivery and logistics with meticulous care. He keeps teams aligned, timelines clear and execution moving smoothly, so strategies become action. His practical approach ensures every initiative stays on track and delivers for beneficiaries.",
+    bio: "I’m José Sousa, I’m 21 years old and I’m a developer at ImpactSphere, where I work as an Implementation Manager.\n\nI strongly believe in the mission that ImpactSphere is developing. Supporting NGOs is an extremely important cause and, at the same time, it brings very interesting challenges, which is why I joined the team.\n\nIn my free time, I enjoy developing side projects, watching documentaries and following football, particularly the Premier League.",
   },
   {
     id: 6,
     name: "Margarida Oliveira",
     role: "Project Operations Manager",
-    image: "/images/team/margarida-oliveira.png",
+    image: "/images/team/pom-margarida.png",
     bgColor: "bg-[#7B5C9C]",
-    bio: "Margarida coordinates the operational details that make impact possible. She supports partners with processes, communication plans and resource management, helping each project scale thoughtfully and effectively. Her strength is keeping complex programs running with care and consistency.",
+    bio: "I’m Margarida Oliveira, I’m 24 years old and I’m part of the ImpactSphere team as a Project and Operations Manager. Human rights have always been a cause I care deeply about and the opportunity to contribute to their representation motivated me to join this team.\n\nIn my free time, I’m constantly looking for new volunteering opportunities, a new book, or a new series, so I’m always open to suggestions. ",
   },
   {
     id: 7,
     name: "Matilde Tavares",
     role: "Communication and Social Media Manager",
-    image: "/images/team/matilde-tavares.png",
+    image: "/images/team/csmm-matilde.png",
     bgColor: "bg-[#9B3F9B]",
-    bio: "Matilde shapes stories that connect people to purpose. She develops communication strategies that raise visibility for initiatives and build stronger engagement across audiences. Her work helps partners share their mission clearly and inspire action.",
+    bio: "I’m Matilde Tavares, I’m 22 years old and I’m the Social Media Manager of ImpactSphere. Effective communication is essential in advancing human rights, as it amplifies voices, fosters understanding, and drives meaningful change.\n\nI have consistently demonstrated a strong sensitivity to human rights issues, grounded in my firm belief that all individuals are equal and entitled to the same fundamental rights.\n\nIn my daily routine I like to do things that make me feel good about myself such as going for walks, going to pilates and hanging out with my friends. ",
   },
   {
     id: 8,
-    name: "Pedro Gorobey",
-    role: "Design Manager",
-    image: "/images/team/pedro-gorobey.png",
-    bgColor: "bg-[#4A6BB8]",
-    bio: "Pedro brings visual design and brand clarity to every project. He creates polished, accessible experiences that strengthen partner messaging and audience trust. His focus is on delivering designs that feel professional, human and meaningful.",
+    name: "Bruna Jardim",
+    role: "UX/UI Manager",
+    image: "/images/team/uiux-bruna.png",
+    bgColor: "bg-[#9B3F9B]",
+    bio: "I’m Bruna Jardim, I’m 23 years old and I’m the UX/UI Manager at ImpactSphere. I believe that human rights and other important causes deserve the support they need in order to bring projects out of the drawer and turn them into reality.\n\nI have a strong appreciation for organization, setting clear deadlines, and consistently meeting them—above all, I’m driven by ensuring that our clients are truly satisfied with the final product.\n\nOutside of my professional work, I really enjoy reading, attending concerts, and exploring new restaurants.",
   },
   {
     id: 9,
-    name: "Francisco Mourão",
-    role: "Audiovisual Manager",
-    image: "/images/team/francisco-mourao.png",
-    bgColor: "bg-[#6B4C8C]",
-    bio: "Francisco produces engaging audiovisual content that amplifies impact. He crafts documentary-style videos, campaign media and visual narratives that help communities tell their own stories. His work supports trust, transparency and powerful outreach.",
+    name: "Pedro Gorobey",
+    role: "Design Manager",
+    image: "/images/team/design-pedro.png",
+    bgColor: "bg-[#4A6BB8]",
+    bio: "I’m Pedro Gorobey, I’m 21 years old and I am a Design Manager in the developers team at ImpactSphere. This project, in particular, helps me bridge the gap between the desire to create impact and the real ability to make it happen around a cause. In a way, the dynamics of this work have also led me to adopt and believe even more strongly in this project.\n\nMy work focuses on creating visually consistent and functionally robust digital experiences, ensuring that brand identity is translated into cohesive, intuitive, and easy-to-navigate web interfaces.\n\nIn my daily life and free time, I enjoy playing video games, going for walks, and developing software projects. ",
   },
   {
     id: 10,
+    name: "Francisco Mourão",
+    role: "Audiovisual Manager",
+    image: "/images/team/audiovisual-francisco.png",
+    bgColor: "bg-[#6B4C8C]",
+    bio: "My name is Francisco Mourão, i´m 23 years old, i´m the Audiovisual Manager at ImpactSphere. Audiovisual content has the power to transform ideas into experiences that inform and inspire action.In a world where visibility matters, visual storytelling is seen as an essential tool to give attention and emotional impact to the causes that deserve.\n\nI have always valued the principles of dignity, equality and representation, and these values shape both my perspective and my work, being this one of many reasons why  i joined this project.\n\nOutside of work, I enjoy practicing sports, listening to music and spending time with friends. ",
+  },
+  {
+    id: 11,
     name: "Henrique Fernandes",
     role: "Test Manager",
-    image: "/images/team/henrique-fernandes.png",
+    image: "/images/team/test-henrique.png",
     bgColor: "bg-[#8B4F8B]",
-    bio: "Henrique ensures the quality of our digital and operational tools. He tests every interaction point, checks project workflows for reliability, and helps teams fix issues before they reach partners. His attention to detail keeps every initiative stable and dependable.",
+    bio: "I’m Henrique Fernandes, I’m 21 years old and I’m the Test Manager of the team. I have always been drawn to projects that use technology to create positive social impact, and this project is no exception.\n\nI’m responsible for ensuring that our work reaches the field with the highest possible quality, guaranteeing the reliability, performance, and overall excellence of every digital product we deliver. I value organization, continuous improvement and collaboration.\n\nIn my free time, I enjoy playing guitar and playing tennis.",
   },
 ];
 
@@ -181,36 +194,34 @@ export const values: Value[] = [
   {
     title: "Impact First",
     description:
-      "We measure success by the positive change we create in communities and lives",
+      "We believe in creating spaces where every voice can be heard and valued.",
   },
   {
     title: "Transparency",
     description:
-      "Open communication and clear metrics build trust with our partners and stakeholders",
+      "We act with clarity and responsibility in every partnership, project, and decision.",
   },
   {
     title: "Collaboration",
     description:
-      "We believe in the power of partnerships to amplify impact and drive innovation",
+      "We work to turn intentions into concrete and lasting results.",
   },
 ];
 
 export const services: Service[] = [
   {
     title: "Digital",
-    items: [
-      "Social media strategy and management",
-      "Content planning",
-      "Multimedia production",
-      "Communication strategies and action plans",
-    ],
+    description:
+      "We manage social media strategy and platforms, plan engaging content, produce multimedia materials and develop communication strategies and action plans to support effective outreach.",
   },
   {
     title: "Partnerships",
-    items: ["Connecting NGOs, nonprofit organizations, and content creators"],
+    description:
+      "We connect NGOs, nonprofit organizations and content creators to foster collaboration and strengthen impact through shared initiatives and communication.",
   },
   {
-    title: "Event Planning",
-    items: ["Logistics", "External relations", "Merch"],
+    title: "Event planning",
+    description:
+      "We handle logistics, manage external relations and coordinate merchandise activities to support smooth operations and strengthen partnerships.",
   },
 ];

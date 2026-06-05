@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Footer, Navigation } from "@/app/components/layout";
-import { GlassCard, SectionHeader } from "@/app/components/ui";
+import { SectionHeader } from "@/app/components/ui";
 import { containerVariants, itemVariants } from "@/app/lib/animations";
 import { featuredProjects } from "@/app/lib/constants";
 
@@ -45,13 +45,12 @@ export default function ProjectsPage() {
                 className="max-w-2xl"
               >
                 <h2 className="heading-section">
-                  Bringing human rights projects from concept to measurable
-                  impact.
+                  Turning NGO initiatives into visible, company-backed impact.
                 </h2>
                 <p className="text-text-blue font-sans text-lg sm:text-xl leading-relaxed mt-4">
-                  We build meaningful partnerships with NGOs, activists and
-                  funders to deliver high-impact programs that are visible,
-                  sustainable and rooted in community needs.
+                  We connect nonprofit organizations with mission-aligned
+                  companies to create stronger, more sustainable social projects
+                  that achieve measurable results.
                 </p>
               </motion.div>
 
@@ -64,7 +63,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="rounded-[30px] border border-white/10 bg-white/5 p-6">
                   <p className="text-sm uppercase tracking-[0.3em] text-accent-purple mb-4">
-                    Impact partners
+                    Partner companies
                   </p>
                   <p className="heading-card text-text-blue">24</p>
                 </div>
@@ -79,7 +78,7 @@ export default function ProjectsPage() {
               className="relative h-[420px] rounded-[30px] overflow-hidden"
             >
               <Image
-                src="https://picsum.photos/900/700?random=9"
+                src="/images/projects/2.png"
                 alt="Projects overview"
                 fill
                 className="object-cover"
@@ -89,9 +88,7 @@ export default function ProjectsPage() {
                 <p className="text-xs uppercase tracking-[0.35em] text-white/80 mb-2">
                   FEATURED PROJECT
                 </p>
-                <h3 className="heading-card text-white">
-                  Community Justice Network
-                </h3>
+                <h3 className="heading-card text-white">Porto Care</h3>
               </div>
             </motion.div>
           </div>
@@ -118,7 +115,7 @@ export default function ProjectsPage() {
               <motion.div
                 key={project.id}
                 variants={itemVariants}
-                className="relative glass-card rounded-[30px] p-6 sm:p-8 lg:p-10 overflow-hidden"
+                className="relative bg-[var(--light-blue)]/50 rounded-[30px] p-6 sm:p-8 lg:p-10 overflow-hidden"
               >
                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
                   {/* Project Image */}
@@ -145,7 +142,7 @@ export default function ProjectsPage() {
           </motion.div>
 
           <div className="mt-16">
-            <GlassCard className="rounded-[70px] p-8 sm:p-10 lg:p-12">
+            <div className="rounded-[70px] p-8 sm:p-10 lg:p-12">
               <div className="grid gap-6 lg:grid-cols-3">
                 <div className="space-y-4">
                   <p className="text-xs uppercase tracking-[0.3em] text-accent-purple">
@@ -161,8 +158,9 @@ export default function ProjectsPage() {
                     Strengthening advocacy
                   </p>
                   <p className="text-body text-sm sm:text-base leading-relaxed text-text-blue/80">
-                    Our project work raises visibility for human rights abuses
-                    while creating safer space for vulnerable communities.
+                    Our project work raises visibility for NGOs and makes it
+                    easier for companies to partner with social causes that need
+                    support.
                   </p>
                 </div>
 
@@ -176,7 +174,7 @@ export default function ProjectsPage() {
                   </p>
                 </div>
               </div>
-            </GlassCard>
+            </div>
           </div>
         </div>
       </div>
