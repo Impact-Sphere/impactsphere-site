@@ -42,13 +42,9 @@ export default function Footer() {
             <div className="space-y-2 text-left">
               <div className="flex items-center gap-4 font-semibold">
                 <MdEmail className="text-white/70" size={24} />
-                <a href="mailto:hello@impactsphere.com">
-                  hello@impactsphere.com
+                <a href="mailto:impactsphere2026@gmail.com">
+                  impactsphere2026@gmail.com
                 </a>
-              </div>
-              <div className="flex items-center gap-4 font-semibold">
-                <MdPhone className="text-white/70" size={24} />
-                <a href="tel:+441234567890">+351 982846193</a>
               </div>
             </div>
             <div className="text-left sm:text-right sm:max-w-md">

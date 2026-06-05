@@ -89,6 +89,9 @@ export default function Home() {
                 <motion.button
                   type="button"
                   className="group btn-primary flex-1 items-center gap-2 sm:gap-3"
+                  onClick={() =>
+                    window.open("https://dash.impactsphere.org/", "_self")
+                  }
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -97,6 +100,9 @@ export default function Home() {
                 <motion.button
                   type="button"
                   className="group btn-primary flex-1 items-center gap-2 sm:gap-3"
+                  onClick={() =>
+                    window.open("https://dash.impactsphere.org/", "_self")
+                  }
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
