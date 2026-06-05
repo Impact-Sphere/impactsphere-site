@@ -15,16 +15,14 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
       className="group cursor-pointer h-full"
     >
       <div className="glass-card rounded-[44px] relative overflow-hidden h-full flex flex-col justify-between">
-        <div className="p-4">
-          <div className="aspect-[3/4] w-full relative rounded-2xl overflow-hidden ">
-            <Image
-              src={member.image}
-              alt={member.name}
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            />
-          </div>
+        <div className="aspect-[3/4] w-full relative rounded-2xl overflow-hidden ">
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
         </div>
         <div className="nav-glass rounded-[44px] p-4 flex-1 flex flex-col justify-center">
           <div className="text-center">
