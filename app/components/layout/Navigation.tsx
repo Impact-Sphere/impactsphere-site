@@ -63,6 +63,9 @@ export default function Navigation() {
             <motion.button
               type="button"
               className="px-4 sm:px-5 lg:px-6 py-2 rounded-full border-2 border-accent-blue text-accent-blue text-sm font-medium hover:bg-accent-blue hover:text-white transition-all duration-300"
+              onClick={() =>
+                window.open("https://dash.impactsphere.org/login", "_self")
+              }
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
