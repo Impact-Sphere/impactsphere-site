@@ -103,6 +103,12 @@ export default function Navigation() {
           <button
             type="button"
             className="px-6 py-2.5 rounded-full border-2 border-accent-blue text-accent-blue text-base font-medium hover:bg-accent-blue hover:text-white transition-all duration-300 mt-2"
+            onClick={() =>
+              window.open(
+                "https://dash.impactsphere.org/login",
+                "_self",
+              )
+            }
           >
             Log in
           </button>
