@@ -41,13 +41,13 @@ export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
           </div>
 
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-start">
-            <div className="rounded-[40px] bg-[#d6e2fb] p-6 sm:p-8 lg:p-10">
-              <div className="relative aspect-square w-full rounded-[40px] overflow-hidden">
+            <div className="rounded-[40px] bg-[#d6e2fb] lg:p-8">
+              <div className="relative aspect-3/4 w-full rounded-[40px] overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-contain object-center"
+                  className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
