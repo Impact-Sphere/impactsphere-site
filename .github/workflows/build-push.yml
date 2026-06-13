@@ -19,7 +19,7 @@ jobs:
       - name: Log in to registry
         uses: docker/login-action@v3
         with:
-          registry: registry.henriquesf.me
+          registry: harbor.henriquesf.me
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
@@ -29,18 +29,5 @@ jobs:
           context: .
           push: true
           tags: |
-            registry.henriquesf.me/impact-sphere-site:${{ github.sha }}
-            registry.henriquesf.me/impact-sphere-site:latest
-      - name: Update NixOS Config
-        run: |
-          git config --global user.email "nix-bot@henriquesf.me"
-          git config --global user.name "NixOS Deployment Bot"
-
-          git clone https://x-access-token:${{ secrets.NIX_TOKEN }}@github.com/HenriqueSFernandes/dotfiles-server.git
-          cd dotfiles-server
-
-          sed -i 's|image = "registry.henriquesf.me/impact-sphere-site:.*";|image = "registry.henriquesf.me/impact-sphere-site:${{ github.sha }}";|' services/impact-sphere.nix
-
-          git add .
-          git commit -m "deploy: update impact-sphere-site to ${{ github.sha }}"
-          git push
+            harbor.henriquesf.me/impact-sphere/impact-sphere-site:${{ github.sha }}
+            harbor.henriquesf.me/impact-sphere/impact-sphere-site:latest
